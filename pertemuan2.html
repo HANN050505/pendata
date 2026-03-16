@@ -1,0 +1,661 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pertemuan 2 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pertemuan2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Pertemuan 3" href="pertemuan3.html" />
+    <link rel="prev" title="Pertemuan 1" href="pertemuan1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pertemuan1.html">Pertemuan 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pertemuan 2</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="pertemuan3.html">Pertemuan 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pertemuan4.html">Pertemuan 4</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="pertemuan5%28soal%20missing%20value%29.html">pertemuan 5</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpertemuan2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/pertemuan2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Pertemuan 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pertemuan 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-dan-visualisasi-data-dengan-orange-data-mining">Analisis dan Visualisasi Data dengan Orange Data Mining</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-dan-struktur-data-data-info-data-table">1. Ringkasan dan Struktur Data (Data Info &amp; Data Table)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistik-deskriptif-feature-statistics">2. Statistik Deskriptif (Feature Statistics)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-kelas-target-distributions">3. Distribusi Kelas Target (Distributions)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-box-plot">4. Deteksi Outlier (Box Plot)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hubungan-antar-variabel-scatter-plot">5. Hubungan Antar Variabel (Scatter Plot)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-korelasi-antar-atribut-correlations">6. Analisis Korelasi Antar Atribut (Correlations)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengukur-tingkat-kepentingan-atribut-rank">7. Mengukur Tingkat Kepentingan Atribut (Rank)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapan-data-latih-dan-data-uji-data-sampler">8. Persiapan Data Latih dan Data Uji (Data Sampler)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-atribut">Jenis Atribut</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nominal">Nominal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinal">Ordinal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biner">Biner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numerik">Numerik</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="pertemuan-2">
+<h1>Pertemuan 2<a class="headerlink" href="#pertemuan-2" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="analisis-dan-visualisasi-data-dengan-orange-data-mining">
+<h1>Analisis dan Visualisasi Data dengan Orange Data Mining<a class="headerlink" href="#analisis-dan-visualisasi-data-dengan-orange-data-mining" title="Link to this heading">#</a></h1>
+<p>Tahap <em>Data Understanding</em> dan visualisasi (<em>Exploratory Data Analysis</em> / EDA) dapat dilakukan secara intuitif menggunakan <strong>Orange Data Mining</strong> melalui antarmuka visual berbasis <em>Widget</em>.</p>
+<p>Berikut adalah tahapan dan hasil eksplorasi dataset Iris menggunakan Orange:</p>
+<section id="ringkasan-dan-struktur-data-data-info-data-table">
+<h2>1. Ringkasan dan Struktur Data (Data Info &amp; Data Table)<a class="headerlink" href="#ringkasan-dan-struktur-data-data-info-data-table" title="Link to this heading">#</a></h2>
+<p>Langkah pertama adalah mengetahui dimensi dan struktur data yang akan diolah. Melalui widget <strong>Data Info</strong>, kita bisa melihat bahwa Dataset Iris terdiri dari 150 baris data, dengan 4 atribut fitur (numerik) dan 1 atribut target (kategorikal yaitu <code class="docutils literal notranslate"><span class="pre">species</span></code>). Pada tahap ini juga terkonfirmasi bahwa tidak ditemukan adanya <em>missing value</em> (data kosong). Detail isi datanya dapat dilihat langsung menggunakan widget <strong>Data Table</strong>.</p>
+<p><img alt="Data Info dan Data Table" src="_images/A.png" />
+<em>Gambar: Ringkasan data mentah pada widget Data Info dan Data Table.</em></p>
+</section>
+<section id="statistik-deskriptif-feature-statistics">
+<h2>2. Statistik Deskriptif (Feature Statistics)<a class="headerlink" href="#statistik-deskriptif-feature-statistics" title="Link to this heading">#</a></h2>
+<p>Untuk melihat ringkasan nilai statistik dari setiap atribut seperti rata-rata (<em>Mean</em>), <em>Median, Min, Max</em>, dan <em>Standar Deviasi</em>, kita menggunakan widget <strong>Feature Statistics</strong>. Widget ini merangkum seluruh informasi numerik tersebut secara langsung dalam satu tampilan visual tabel yang mudah dipahami.</p>
+<p><img alt="Feature Statistics" src="_images/B.png" />
+<em>Gambar: Ringkasan statistik deskriptif dari seluruh atribut dataset Iris.</em></p>
+</section>
+<section id="distribusi-kelas-target-distributions">
+<h2>3. Distribusi Kelas Target (Distributions)<a class="headerlink" href="#distribusi-kelas-target-distributions" title="Link to this heading">#</a></h2>
+<p>Untuk melihat apakah dataset kita seimbang (<em>balanced</em>), kita perlu mengecek distribusi target <code class="docutils literal notranslate"><span class="pre">species</span></code> menggunakan widget <strong>Distributions</strong>. Hasilnya menunjukkan bahwa masing-masing spesies (Iris-setosa, Iris-versicolor, dan Iris-virginica) memiliki proporsi jumlah yang persis sama, yaitu masing-masing 50 data.</p>
+<p><img alt="Distribusi Spesies" src="_images/C.png" />
+<em>Gambar: Distribusi jumlah data per spesies (Value Counts).</em></p>
+</section>
+<section id="deteksi-outlier-box-plot">
+<h2>4. Deteksi Outlier (Box Plot)<a class="headerlink" href="#deteksi-outlier-box-plot" title="Link to this heading">#</a></h2>
+<p>Visualisasi <strong>Box Plot</strong> digunakan untuk melihat sebaran nilai kuartil (Q1, Median, Q3) dan mendeteksi apakah terdapat pencilan data (<em>outlier</em>). Berdasarkan pemetaan atribut <code class="docutils literal notranslate"><span class="pre">sepal_width</span></code> terhadap setiap target spesies, terlihat adanya beberapa titik <em>outlier</em> pada spesies Iris-virginica.</p>
+<p><img alt="Box Plot Outlier" src="_images/D.png" />
+<em>Gambar: Deteksi outlier menggunakan Box Plot berdasarkan spesies.</em></p>
+</section>
+<section id="hubungan-antar-variabel-scatter-plot">
+<h2>5. Hubungan Antar Variabel (Scatter Plot)<a class="headerlink" href="#hubungan-antar-variabel-scatter-plot" title="Link to this heading">#</a></h2>
+<p>Untuk menemukan pola korelasi dan persebaran data antar atribut, kita menggunakan visualisasi <strong>Scatter Plot</strong> yang memetakan dua variabel sekaligus. Dengan memplot <code class="docutils literal notranslate"><span class="pre">petal_length</span></code> pada sumbu X dan <code class="docutils literal notranslate"><span class="pre">petal_width</span></code> pada sumbu Y, terlihat sangat jelas bahwa spesies Iris-setosa membentuk klaster (kelompok) yang terpisah jauh dari dua spesies lainnya, sehingga sangat mudah untuk diklasifikasikan.</p>
+<p><img alt="Scatter Plot" src="_images/E.png" />
+<em>Gambar: Visualisasi korelasi antara panjang dan lebar mahkota (petal).</em></p>
+</section>
+<section id="analisis-korelasi-antar-atribut-correlations">
+<h2>6. Analisis Korelasi Antar Atribut (Correlations)<a class="headerlink" href="#analisis-korelasi-antar-atribut-correlations" title="Link to this heading">#</a></h2>
+<p>Selain melihat korelasi secara visual melalui <em>Scatter Plot</em>, kita juga bisa mengukur kekuatan hubungan matematis antar variabel numerik menggunakan widget <strong>Correlations</strong>.</p>
+<ul class="simple">
+<li><p>Nilai korelasi berkisar antara -1 hingga 1.</p></li>
+<li><p>Pada dataset Iris, kita akan melihat bahwa <code class="docutils literal notranslate"><span class="pre">petal_length</span></code> dan <code class="docutils literal notranslate"><span class="pre">petal_width</span></code> memiliki korelasi positif yang sangat tinggi (mendekati angka 1), yang berarti jika kelopak memanjang, lebarnya juga cenderung bertambah.</p></li>
+</ul>
+<p><img alt="Widget Correlations" src="_images/F.png" />
+<em>Gambar: Tabel nilai korelasi Pearson antar atribut.</em></p>
+</section>
+<section id="mengukur-tingkat-kepentingan-atribut-rank">
+<h2>7. Mengukur Tingkat Kepentingan Atribut (Rank)<a class="headerlink" href="#mengukur-tingkat-kepentingan-atribut-rank" title="Link to this heading">#</a></h2>
+<p>Dalam <em>Data Mining</em>, tidak semua fitur memiliki kegunaan yang sama. Beberapa fitur lebih penting daripada yang lain untuk membedakan target (spesies). Kita bisa menggunakan widget <strong>Rank</strong> untuk melihat atribut mana yang paling berpengaruh.</p>
+<ul class="simple">
+<li><p>Metode seperti <em>Information Gain</em> atau <em>Gain Ratio</em> akan menilai setiap fitur.</p></li>
+<li><p><strong>Insight</strong>: Pada dataset Iris, atribut <code class="docutils literal notranslate"><span class="pre">petal_width</span></code> dan <code class="docutils literal notranslate"><span class="pre">petal_length</span></code> akan menduduki peringkat teratas sebagai fitur yang paling membedakan spesies, sedangkan atribut <code class="docutils literal notranslate"><span class="pre">sepal_width</span></code> berada di peringkat terbawah.</p></li>
+</ul>
+<p><img alt="Widget Rank" src="_images/G.png" />
+<em>Gambar: Peringkat atribut (Feature Scoring) berdasarkan kemampuannya membedakan spesies target.</em></p>
+</section>
+<section id="persiapan-data-latih-dan-data-uji-data-sampler">
+<h2>8. Persiapan Data Latih dan Data Uji (Data Sampler)<a class="headerlink" href="#persiapan-data-latih-dan-data-uji-data-sampler" title="Link to this heading">#</a></h2>
+<p>Setelah kita memahami karakteristik data secara mendalam, langkah terakhir sebelum masuk ke tahap <em>Modeling</em> (pembuatan model AI) adalah membagi dataset. Menggunakan widget <strong>Data Sampler</strong>, kita membagi data asli menjadi dua bagian:</p>
+<ul class="simple">
+<li><p><strong>Data Latih (Training Data)</strong>: Biasanya sebesar 70-80%, digunakan untuk melatih algoritma.</p></li>
+<li><p><strong>Data Uji (Testing Data)</strong>: Sisa 20-30%, digunakan untuk menguji seberapa pintar model yang telah dilatih.</p></li>
+</ul>
+<p><img alt="Widget Data Sampler" src="letakkan_foto_data_sampler_disini.png" />
+<em>Gambar: Pengaturan persentase pembagian data latih dan data uji pada Data Sampler.</em></p>
+</section>
+<section id="jenis-atribut">
+<h2>Jenis Atribut<a class="headerlink" href="#jenis-atribut" title="Link to this heading">#</a></h2>
+<section id="nominal">
+<h3>Nominal<a class="headerlink" href="#nominal" title="Link to this heading">#</a></h3>
+<p>Tidak memiliki urutan.<br />
+Contoh: <code class="docutils literal notranslate"><span class="pre">species</span></code></p>
+</section>
+<section id="ordinal">
+<h3>Ordinal<a class="headerlink" href="#ordinal" title="Link to this heading">#</a></h3>
+<p>Memiliki urutan tetapi tidak mengukur jarak.<br />
+Contoh: <code class="docutils literal notranslate"><span class="pre">rating</span></code></p>
+</section>
+<section id="biner">
+<h3>Biner<a class="headerlink" href="#biner" title="Link to this heading">#</a></h3>
+<p>Memiliki dua nilai.<br />
+Contoh: <code class="docutils literal notranslate"><span class="pre">ya/tidak</span></code></p>
+</section>
+<section id="numerik">
+<h3>Numerik<a class="headerlink" href="#numerik" title="Link to this heading">#</a></h3>
+<p>Berbentuk angka, terdiri dari:</p>
+<ul class="simple">
+<li><p>Interval</p></li>
+<li><p>Rasio</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pertemuan1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Pertemuan 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="pertemuan3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Pertemuan 3</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pertemuan 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-dan-visualisasi-data-dengan-orange-data-mining">Analisis dan Visualisasi Data dengan Orange Data Mining</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-dan-struktur-data-data-info-data-table">1. Ringkasan dan Struktur Data (Data Info &amp; Data Table)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistik-deskriptif-feature-statistics">2. Statistik Deskriptif (Feature Statistics)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-kelas-target-distributions">3. Distribusi Kelas Target (Distributions)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-box-plot">4. Deteksi Outlier (Box Plot)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hubungan-antar-variabel-scatter-plot">5. Hubungan Antar Variabel (Scatter Plot)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-korelasi-antar-atribut-correlations">6. Analisis Korelasi Antar Atribut (Correlations)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengukur-tingkat-kepentingan-atribut-rank">7. Mengukur Tingkat Kepentingan Atribut (Rank)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapan-data-latih-dan-data-uji-data-sampler">8. Persiapan Data Latih dan Data Uji (Data Sampler)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-atribut">Jenis Atribut</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nominal">Nominal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinal">Ordinal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biner">Biner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numerik">Numerik</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

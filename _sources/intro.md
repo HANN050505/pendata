@@ -1,9 +1,9 @@
 # Introduction
 
 **Nama:** Raihan Aryanova  
-**NIM:** 23XXXXXXXX  
-**Email:** raihan@example.com  
-**Program Studi:** Informatika  
+**NIM:** 240411100094  
+**Email:** raihanaryanova@gmail.com  
+**Program Studi:** Teknik Informatika  
 
 ## Tentang Penambangan Data
 
