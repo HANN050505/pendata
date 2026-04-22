@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Pertemuan 1 &#8212; My sample book</title>
+    <title>Pertemuan 8 UTS &#8212; My sample book</title>
   
   
   
@@ -57,11 +57,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pertemuan1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pertemuan8UTS';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Pertemuan 2 – Memahami Data (Data Understanding)" href="pertemuan2.html" />
-    <link rel="prev" title="Introduction" href="intro.html" />
+    <link rel="prev" title="pertemuan 5" href="pertemuan5%28soal%20missing%20value%29.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,12 +179,25 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pertemuan 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pertemuan1.html">Pertemuan 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pertemuan2.html">Pertemuan 2</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="pertemuan3.html">Pertemuan 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pertemuan4.html">Pertemuan 4</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pertemuan5(soal missing value).html">Pertemuan 5</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pertemuan8UTS.html">Pertemuan 8 UTS</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="pertemuan5%28soal%20missing%20value%29.html">pertemuan 5</a></li>
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pertemuan 8 UTS</a></li>
 </ul>
 
     </div>
@@ -257,7 +269,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpertemuan1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpertemuan8UTS.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +299,7 @@
       
       
       
-      <li><a href="_sources/pertemuan1.md" target="_blank"
+      <li><a href="_sources/pertemuan8UTS.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -358,7 +370,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -369,11 +383,31 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Pertemuan 1</h1>
+    <h1>Pertemuan 8 UTS</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alur-kerja-workflow-keseluruhan">1. Alur Kerja (Workflow) Keseluruhan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemrosesan-data-data-preprocessing">2. Pemrosesan Data (Data Preprocessing)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pembersihan-kolom-dan-penanganan-missing-value">a. Pembersihan Kolom dan Penanganan Missing Value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-transformasi-dan-normalisasi-data">b. Transformasi dan Normalisasi Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembagian-data-data-splitting">3. Pembagian Data (Data Splitting)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-k-nearest-neighbors-knn">4. Pemodelan K-Nearest Neighbors (KNN)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-dan-perhitungan-metrik">5. Evaluasi dan Perhitungan Metrik</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-confusion-matrix">a. Confusion Matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-metrik-kinerja-accuracy-precision-recall-f1-score">b. Metrik Kinerja (Accuracy, Precision, Recall, F1-Score)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -383,50 +417,90 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="pertemuan-1">
-<h1>Pertemuan 1<a class="headerlink" href="#pertemuan-1" title="Link to this heading">#</a></h1>
-<p>Apa Itu Data Mining</p>
-<p>Data mining adalah proses non-trivial untuk mengekstraksi informasi yang bersifat implisit, sebelumnya belum diketahui, dan berpotensi bermanfaat dari sekumpulan data.</p>
-<p>Perkembangan teknologi informasi menyebabkan pertumbuhan jumlah data yang sangat pesat. Transaksi digital di berbagai sektor bisnis meningkat secara signifikan, ditambah dengan perkembangan internet yang semakin cepat sehingga menghasilkan data dalam volume dan variasi yang sangat besar. Fenomena ini menimbulkan kondisi yang sering disebut sebagai kaya data tetapi miskin pengetahuan, yaitu situasi di mana data tersedia dalam jumlah melimpah, namun belum dimanfaatkan secara optimal untuk mendukung kebutuhan bisnis maupun pengambilan keputusan.</p>
-<p>Dengan banyaknya data yang tersedia, diperlukan metode analisis otomatis untuk mengolah data dalam jumlah besar atau kompleks guna menemukan pola, hubungan, atau kecenderungan penting yang sering kali tidak disadari sebelumnya. Data mining merupakan bidang multidisiplin yang bertujuan untuk memperoleh pengetahuan atau informasi dari kumpulan data yang besar.</p>
-<p>Secara analogi, data mining dapat diibaratkan seperti proses penambangan emas dari tumpukan tanah dan batuan. Penekanannya terletak pada proses menemukan sesuatu yang bernilai dari bahan mentah. Dalam konteks data, penambangan dilakukan untuk memperoleh informasi berharga yang dapat dijadikan dasar dalam pengambilan keputusan. Proses ini melibatkan berbagai teknik seperti statistik, matematika, kecerdasan buatan, dan machine learning untuk mengekstraksi serta mengidentifikasi pola dan pengetahuan dari basis data berukuran besar.</p>
-<p>Beberapa istilah lain yang memiliki makna serupa dengan data mining antara lain Knowledge Discovery in Databases (KDD), knowledge extraction, data/pattern analysis, business intelligence, data archaeology, dan data dredging.
-Keunggulan Data Mining
-Studi statistik tradisional umumnya menggunakan data masa lalu untuk memprediksi kondisi sistem di masa depan. Sementara itu, data mining tidak hanya memanfaatkan data historis, tetapi juga membangun pola berdasarkan hubungan logis antar data sehingga mampu memberikan gambaran tentang kemungkinan yang dapat terjadi di masa depan.</p>
-<p>Berbeda dengan pendekatan statistik yang cenderung bersifat retrospektif (melihat ke belakang), data mining lebih berorientasi pada penemuan pola, klasifikasi, serta prediksi yang mendukung pengambilan keputusan strategis.
-Secara singkat, data mining memiliki keunggulan sebagai berikut:
-Data mining mampu memberikan pemahaman yang lebih komprehensif terhadap data dengan menemukan pola yang sebelumnya tidak terlihat.
-Data mining dapat membangun model prediktif yang membantu dalam proses pengambilan keputusan yang lebih tepat dan terarah untuk masa depan.</p>
-<p>Tugas Utama Data Mining
-Aktivitas utama dalam data mining adalah menemukan informasi bisnis yang bernilai dari basis data yang sangat besar. Proses ini dapat dianalogikan dengan penambangan logam mulia dari sumber alaminya, di mana teknologi digunakan untuk mengekstraksi nilai tersembunyi dari kumpulan data.</p>
-<p>Proses Data Mining
-Dalam praktiknya, proses data mining mengikuti model standar yang dikenal sebagai CRISP-DM (Cross Industry Standard Process for Data Mining). Model ini merupakan pendekatan terbuka yang menggambarkan siklus hidup proyek data mining, yang terdiri atas beberapa fase yang saling berhubungan.</p>
-<p>Tahapan tersebut meliputi:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="pertemuan-8-uts">
+<h1>Pertemuan 8 UTS<a class="headerlink" href="#pertemuan-8-uts" title="Link to this heading">#</a></h1>
+<p><strong>Deskripsi Proyek:</strong>
+Analisis ini bertujuan untuk mengklasifikasikan 2.000 sampel data tanah ke dalam dua kelas, yaitu <strong>Subur</strong> dan <strong>Tidak Subur</strong>. Data memiliki 10 fitur agronomis dan terdapat permasalahan <em>missing value</em> serta perbedaan skala data yang harus diselesaikan sebelum pemodelan. Pemodelan dilakukan menggunakan algoritma K-Nearest Neighbors (KNN) melalui platform KNIME Analytics.</p>
+<hr class="docutils" />
+<section id="alur-kerja-workflow-keseluruhan">
+<h2>1. Alur Kerja (Workflow) Keseluruhan<a class="headerlink" href="#alur-kerja-workflow-keseluruhan" title="Link to this heading">#</a></h2>
+<p><img alt="Tabel Statistics" src="_images/11.png" /></p>
+<p><strong>Penjelasan:</strong>
+Gambar di atas adalah <em>workflow</em> utuh dari proses analitik yang dibangun. Proses ini terdiri dari 3 tahapan utama:</p>
 <ol class="arabic simple">
-<li><p>Memahami Bisnis (Business Understanding)
-Tahap ini berfokus pada pemahaman tujuan proyek dan kebutuhan bisnis. Tujuan bisnis kemudian diterjemahkan ke dalam tujuan data mining serta rencana kerja untuk mencapainya. Pada tahap ini dilakukan analisis menyeluruh untuk mengidentifikasi faktor-faktor penting yang dapat memengaruhi keberhasilan proyek.
-Output dari tahap ini meliputi:
-Inventarisasi sumber daya seperti tenaga ahli, data, perangkat keras, dan perangkat lunak.
-Identifikasi persyaratan, asumsi, dan kendala proyek, termasuk aspek hukum dan keamanan.
-Daftar risiko yang mungkin dihadapi selama proyek berlangsung.</p></li>
-<li><p>Memahami Data (Data Understanding)
-Tahap ini dimulai dengan pengumpulan data awal dan dilanjutkan dengan eksplorasi serta verifikasi kualitas data. Tujuannya adalah memahami karakteristik data serta mengidentifikasi bagian yang relevan untuk membangun hipotesis awal.
-Kegiatan dalam tahap ini meliputi:
-Mengumpulkan data dan mendokumentasikan sumber serta permasalahannya.
-Mendeskripsikan struktur, format, jumlah, dan atribut data.
-Melakukan eksplorasi data melalui query, visualisasi, dan analisis statistik sederhana.
-Memverifikasi kualitas data, termasuk kelengkapan, kesalahan, dan missing value.</p></li>
-<li><p>Persiapan Data (Data Preparation)
-Tahap ini mencakup seluruh proses pembentukan dataset akhir yang akan digunakan dalam pemodelan. Proses ini dapat dilakukan berulang kali sesuai kebutuhan.
-Kegiatannya meliputi:
-Memilih data yang relevan dengan tujuan analisis.
-Membersihkan data untuk meningkatkan kualitasnya.
-Mengintegrasikan beberapa sumber data menjadi satu kesatuan informasi yang utuh.
-Hasil dari tahap ini adalah dataset yang siap digunakan untuk proses pemodelan.</p></li>
-<li><p>Pemodelan (Modeling)
-Pada tahap ini dilakukan pembangunan model berdasarkan data yang telah dipersiapkan untuk menjawab kebutuhan bisnis. Metode yang digunakan dapat berupa teknik statistik, machine learning, maupun metode analitis lainnya.
-Kegiatan dalam tahap ini meliputi pemilihan variabel, penerapan algoritma, evaluasi model, serta diagnosis terhadap hasil yang diperoleh.</p></li>
+<li><p><strong>Pemrosesan Data (Preprocessing):</strong> CSV Reader ➔ Column Filter ➔ Missing Value ➔ Category to Number ➔ Normalizer.</p></li>
+<li><p><strong>Pemodelan:</strong> Partitioning ➔ K Nearest Neighbor.</p></li>
+<li><p><strong>Evaluasi:</strong> Scorer.</p></li>
 </ol>
+</section>
+<hr class="docutils" />
+<section id="pemrosesan-data-data-preprocessing">
+<h2>2. Pemrosesan Data (Data Preprocessing)<a class="headerlink" href="#pemrosesan-data-data-preprocessing" title="Link to this heading">#</a></h2>
+<section id="a-pembersihan-kolom-dan-penanganan-missing-value">
+<h3>a. Pembersihan Kolom dan Penanganan Missing Value<a class="headerlink" href="#a-pembersihan-kolom-dan-penanganan-missing-value" title="Link to this heading">#</a></h3>
+<p><img alt="Tabel Statistics" src="_images/12.png" /></p>
+<p><strong>Penjelasan:</strong></p>
+<ul class="simple">
+<li><p><strong>Column Filter:</strong> Sebelum menangani data kosong, kolom ID dihapus karena hanya berfungsi sebagai identitas baris dan tidak memiliki nilai prediktif untuk algoritma <em>machine learning</em>.</p></li>
+<li><p><strong>Missing Value:</strong> Dataset awal memiliki nilai yang hilang (kosong) pada beberapa fitur (seperti N Total, P Tersedia, dll). Untuk mempertahankan jumlah data (2.000 sampel), dilakukan imputasi:</p>
+<ul>
+<li><p><strong>Data Numerik (Double/Integer):</strong> Diisi menggunakan nilai tengah (<strong>Median</strong>). Median dipilih agar nilai yang diimputasi tidak terpengaruh oleh data pencilan (<em>outliers</em>).</p></li>
+<li><p><strong>Data Kategorikal (String):</strong> Diisi menggunakan nilai yang paling sering muncul (<strong>Most Frequent Value</strong> / Modus). Ini digunakan untuk mengisi data kosong pada kolom <em>Tekstur Tanah</em>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="b-transformasi-dan-normalisasi-data">
+<h3>b. Transformasi dan Normalisasi Data<a class="headerlink" href="#b-transformasi-dan-normalisasi-data" title="Link to this heading">#</a></h3>
+<p><img alt="Tabel Statistics" src="_images/13.png" /></p>
+<p><strong>Penjelasan:</strong></p>
+<ul class="simple">
+<li><p><strong>Category to Number:</strong> Mengubah data teks pada kolom <em>Tekstur Tanah</em> menjadi bentuk numerik, karena algoritma KNN membutuhkan input berupa angka untuk menghitung jarak.</p></li>
+<li><p><strong>Normalizer:</strong> Algoritma KNN bekerja dengan menghitung jarak Euclidean antar titik data. Karena fitur-fitur dalam dataset memiliki rentang skala yang jauh berbeda (contoh: <em>pH</em> berskala 0-14, sedangkan <em>P Tersedia</em> bisa mencapai 60 ppm), maka dilakukan normalisasi. Proses ini menyamakan skala seluruh fitur numerik agar tidak ada satu fitur yang mendominasi perhitungan jarak. Kolom <em>Label</em> (Subur/Tidak Subur) dikecualikan dari proses ini.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="pembagian-data-data-splitting">
+<h2>3. Pembagian Data (Data Splitting)<a class="headerlink" href="#pembagian-data-data-splitting" title="Link to this heading">#</a></h2>
+<p><img alt="Tabel Statistics" src="_images/14.png" /></p>
+<p><strong>Penjelasan:</strong>
+Data berjumlah 2.000 baris dibagi menggunakan node Partitioning dengan rasio <strong>80:20</strong>.</p>
+<ul class="simple">
+<li><p><strong>80% (1.600 data)</strong> digunakan sebagai <strong>Data Latih</strong> (<em>Training Set</em>) untuk mengajari model KNN.</p></li>
+<li><p><strong>20% (400 data)</strong> digunakan sebagai <strong>Data Uji</strong> (<em>Testing Set</em>) untuk mengevaluasi performa model.</p></li>
+<li><p>Digunakan metode <strong>Stratified Sampling</strong> pada kolom target (<em>Label</em>). Hal ini memastikan pembagian kelas tetap seimbang (50:50) di data uji, sehingga data uji memiliki tepat 200 sampel kelas Subur dan 200 sampel kelas Tidak Subur.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="pemodelan-k-nearest-neighbors-knn">
+<h2>4. Pemodelan K-Nearest Neighbors (KNN)<a class="headerlink" href="#pemodelan-k-nearest-neighbors-knn" title="Link to this heading">#</a></h2>
+<p><img alt="Tabel Statistics" src="_images/15.png" /></p>
+<p><strong>Penjelasan:</strong>
+Model dilatih menggunakan node K Nearest Neighbor. Algoritma ini akan memprediksi kelas dari data uji berdasarkan kemiripan (jarak terdekat) dengan data latih. Parameter yang diatur adalah jumlah tetangga terdekat (<em>k</em>) dan kolom target klasifikasinya adalah <em>Label</em>. Node ini secara otomatis menghasilkan satu kolom tambahan, yaitu <em>Prediction (Label)</em> yang merupakan hasil tebakan model terhadap 400 data uji.</p>
+</section>
+<hr class="docutils" />
+<section id="evaluasi-dan-perhitungan-metrik">
+<h2>5. Evaluasi dan Perhitungan Metrik<a class="headerlink" href="#evaluasi-dan-perhitungan-metrik" title="Link to this heading">#</a></h2>
+<section id="a-confusion-matrix">
+<h3>a. Confusion Matrix<a class="headerlink" href="#a-confusion-matrix" title="Link to this heading">#</a></h3>
+<p><img alt="Tabel Statistics" src="_images/16.png" /></p>
+<p><strong>Penjelasan:</strong>
+Tabel <em>Confusion Matrix</em> di atas membandingkan nilai aktual (<em>Label</em> asli) dengan nilai tebakan dari mesin (<em>Prediction</em>). Dari total 400 data uji (200 Subur dan 200 Tidak Subur), matriks ini menunjukkan dengan tepat berapa banyak data yang berhasil ditebak dengan benar (berada di garis diagonal) dan berapa banyak yang tebakannya keliru.</p>
+</section>
+<section id="b-metrik-kinerja-accuracy-precision-recall-f1-score">
+<h3>b. Metrik Kinerja (Accuracy, Precision, Recall, F1-Score)<a class="headerlink" href="#b-metrik-kinerja-accuracy-precision-recall-f1-score" title="Link to this heading">#</a></h3>
+<p><img alt="Tabel Statistics" src="_images/17.png" /></p>
+<p><strong>Penjelasan:</strong>
+Berdasarkan hasil evaluasi (pada gambar di atas), didapatkan perhitungan metrik sebagai berikut:</p>
+<ul class="simple">
+<li><p><strong>Accuracy (Akurasi):</strong> Persentase keseluruhan prediksi yang benar dari total 400 data uji. Model menunjukkan performa keseluruhan yang sangat baik.</p></li>
+<li><p><strong>Precision (Presisi):</strong> Ketepatan prediksi untuk masing-masing kelas. Menunjukkan berapa persen tanah yang ditebak ‘Subur’ oleh model yang pada kenyataannya benar-benar subur.</p></li>
+<li><p><strong>Recall:</strong> Kemampuan model mendeteksi seluruh kelas positif. Menunjukkan dari total seluruh tanah subur yang ada, berapa persen yang berhasil ditemukan oleh model.</p></li>
+<li><p><strong>F1-Score (F-Measure):</strong> Merupakan rata-rata harmonik (<em>Harmonic Mean</em>) antara Precision dan Recall. Nilai F1-Score yang tinggi membuktikan bahwa model KNN yang dibangun sangat stabil, seimbang, dan andal dalam membedakan tanah Subur dan Tidak Subur tanpa ada kecenderungan bias pada satu kelas saja.</p></li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -460,22 +534,13 @@ Kegiatan dalam tahap ini meliputi pemilihan variabel, penerapan algoritma, evalu
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="pertemuan5%28soal%20missing%20value%29.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">pertemuan 5</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="pertemuan2.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Pertemuan 2 – Memahami Data (Data Understanding)</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -483,6 +548,33 @@ Kegiatan dalam tahap ini meliputi pemilihan variabel, penerapan algoritma, evalu
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alur-kerja-workflow-keseluruhan">1. Alur Kerja (Workflow) Keseluruhan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemrosesan-data-data-preprocessing">2. Pemrosesan Data (Data Preprocessing)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pembersihan-kolom-dan-penanganan-missing-value">a. Pembersihan Kolom dan Penanganan Missing Value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-transformasi-dan-normalisasi-data">b. Transformasi dan Normalisasi Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembagian-data-data-splitting">3. Pembagian Data (Data Splitting)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-k-nearest-neighbors-knn">4. Pemodelan K-Nearest Neighbors (KNN)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-dan-perhitungan-metrik">5. Evaluasi dan Perhitungan Metrik</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-confusion-matrix">a. Confusion Matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-metrik-kinerja-accuracy-precision-recall-f1-score">b. Metrik Kinerja (Accuracy, Precision, Recall, F1-Score)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
