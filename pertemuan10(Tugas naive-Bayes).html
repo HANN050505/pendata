@@ -466,8 +466,10 @@ document.write(`
 <h2>3. Arsitektur Workflow KNIME<a class="headerlink" href="#arsitektur-workflow-knime" title="Link to this heading">#</a></h2>
 <p>Alur kerja (<em>workflow</em>) yang dibangun pada KNIME sangat ringkas namun esensial, terdiri dari tahap ingesti data hingga tahap komputasi model.</p>
 <blockquote>
-<div><p><img alt="Workflow Keseluruhan KNIME" src="_images/aa.png" />
-<em>Gambar 1: Arsitektur Workflow KNIME yang terdiri dari node CSV Reader yang terhubung langsung ke node Python Script.</em></p>
+<div><p><img alt="Workflow Keseluruhan KNIME" src="_images/aa.png" /></p>
+</div></blockquote>
+<blockquote>
+<div><p><em>Gambar 1: Arsitektur Workflow KNIME yang terdiri dari node CSV Reader yang terhubung langsung ke node Python Script.</em></p>
 </div></blockquote>
 <section id="tahap-1-ingesti-data-node-csv-reader">
 <h3>3.1. Tahap 1: Ingesti Data (Node CSV Reader)<a class="headerlink" href="#tahap-1-ingesti-data-node-csv-reader" title="Link to this heading">#</a></h3>
@@ -477,8 +479,10 @@ document.write(`
 <li><p><strong>Konfigurasi</strong>: Node diarahkan pada direktori penyimpanan lokal file <code class="docutils literal notranslate"><span class="pre">iris.csv</span></code>. Parameter <em>delimiter</em> dikonfigurasi menggunakan koma (<code class="docutils literal notranslate"><span class="pre">,</span></code>) dan opsi <em>has column header</em> diaktifkan agar baris pertama dibaca sebagai nama fitur.</p></li>
 </ul>
 <blockquote>
-<div><p><img alt="Konfigurasi CSV Reader" src="_images/bb.png" />
-<em>Gambar 2: Jendela konfigurasi pada node CSV Reader untuk memuat dataset Iris.</em></p>
+<div><p><img alt="Konfigurasi CSV Reader" src="_images/bb.png" /></p>
+</div></blockquote>
+<blockquote>
+<div><p><em>Gambar 2: Jendela konfigurasi pada node CSV Reader untuk memuat dataset Iris.</em></p>
 </div></blockquote>
 </section>
 <section id="tahap-2-pemrosesan-pemodelan-node-python-script">
@@ -541,7 +545,7 @@ document.write(`
 </pre></div>
 </div>
 <p><img alt="Output" src="_images/cc.png" /></p>
-<p>Gambar 3: Lingkungan pengembangan (editor) di dalam node Python Script saat implementasi kode Scikit-Learn.</p>
+<p>Gambar 3: Output tabel di KNIME yang membandingkan nilai Actual_Class dan Predicted_Class pada subset data uji.</p>
 </section>
 <section id="analisis-langkah-komputasi-code-breakdown">
 <h2>5. Analisis Langkah Komputasi (Code Breakdown)<a class="headerlink" href="#analisis-langkah-komputasi-code-breakdown" title="Link to this heading">#</a></h2>
@@ -555,7 +559,7 @@ document.write(`
 <h2>6. Hasil dan Evaluasi<a class="headerlink" href="#hasil-dan-evaluasi" title="Link to this heading">#</a></h2>
 <p>Setelah node Python Script dieksekusi (F7), console akan mencetak nilai metrik evaluasi model (seperti akurasi dan presisi). Melalui menu Table and Image Output pada node tersebut, kita dapat melihat secara langsung komparasi antara kelas aktual dan kelas hasil prediksi sistem.</p>
 <p><img alt="Output" src="_images/dd.png" /></p>
-<p>Gambar 4: Output tabel di KNIME yang membandingkan nilai Actual_Class dan Predicted_Class pada subset data uji.</p>
+<p>Gambar 4: Output gambar di KNIME yang membandingkan nilai Actual_Class dan Predicted_Class pada subset data uji.</p>
 </section>
 <section id="kesimpulan">
 <h2>7. Kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h2>

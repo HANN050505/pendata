@@ -37,6 +37,7 @@ Dataset yang digunakan adalah **Iris Dataset** (`iris.csv`). Dataset ini terdiri
 Alur kerja (*workflow*) yang dibangun pada KNIME sangat ringkas namun esensial, terdiri dari tahap ingesti data hingga tahap komputasi model.
 
 > ![Workflow Keseluruhan KNIME](aa.png)
+
 > *Gambar 1: Arsitektur Workflow KNIME yang terdiri dari node CSV Reader yang terhubung langsung ke node Python Script.*
 
 ### 3.1. Tahap 1: Ingesti Data (Node CSV Reader)
@@ -45,6 +46,7 @@ Langkah pertama adalah memuat dataset ke dalam memori KNIME.
 * **Konfigurasi**: Node diarahkan pada direktori penyimpanan lokal file `iris.csv`. Parameter *delimiter* dikonfigurasi menggunakan koma (`,`) dan opsi *has column header* diaktifkan agar baris pertama dibaca sebagai nama fitur.
 
 > ![Konfigurasi CSV Reader](bb.png)
+
 > *Gambar 2: Jendela konfigurasi pada node CSV Reader untuk memuat dataset Iris.*
 
 ### 3.2. Tahap 2: Pemrosesan & Pemodelan (Node Python Script)
@@ -110,7 +112,7 @@ knio.output_tables[0] = knio.Table.from_pandas(result_df)
 ![Output](cc.png)
 
 
-Gambar 3: Lingkungan pengembangan (editor) di dalam node Python Script saat implementasi kode Scikit-Learn.
+Gambar 3: Output tabel di KNIME yang membandingkan nilai Actual_Class dan Predicted_Class pada subset data uji.
 
 ## 5. Analisis Langkah Komputasi (Code Breakdown)
 Proses di atas dibagi menjadi beberapa fase komputasional:
@@ -128,7 +130,7 @@ Setelah node Python Script dieksekusi (F7), console akan mencetak nilai metrik e
 
 ![Output](dd.png)
 
-Gambar 4: Output tabel di KNIME yang membandingkan nilai Actual_Class dan Predicted_Class pada subset data uji.
+Gambar 4: Output gambar di KNIME yang membandingkan nilai Actual_Class dan Predicted_Class pada subset data uji.
 
 ## 7. Kesimpulan
 Integrasi KNIME dan skrip Python (Scikit-Learn) berhasil mengimplementasikan metode klasifikasi Gaussian Naive Bayes. Pendekatan ini membuktikan bahwa KNIME tidak hanya tangguh sebagai visual programming tool, tetapi juga sangat fleksibel untuk menampung custom logic code, memberikan keleluasaan penuh bagi Data Scientist dalam melakukan penyesuaian parameter dan pelaporan evaluasi machine learning.
