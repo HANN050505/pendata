@@ -9,6 +9,37 @@ Proyek ini bertujuan untuk membangun model klasifikasi *machine learning* menggu
 
 Berbeda dengan pendekatan visual standar pada KNIME yang menggunakan *node* klasifikasi bawaan, proyek ini mengadopsi pendekatan berbasis *scripting* dengan memanfaatkan ekstensi **KNIME Python Integration**. Pemodelan dilakukan sepenuhnya di dalam *node* Python menggunakan pustaka **Scikit-Learn** (`sklearn.naive_bayes.GaussianNB`), yang memberikan fleksibilitas lebih tinggi dalam kustomisasi kode dan evaluasi model.
 
+### 1.1 Latar Belakang dan Konsep Pembelajaran Terarah
+Dalam disiplin Data Mining dan Machine Learning, terdapat dua paradigma utama pembelajaran: Supervised Learning dan Unsupervised Learning. Proyek klasifikasi bunga Iris ini termasuk dalam kategori Supervised Learning (pembelajaran terarah). Berbeda dengan Unsupervised Learning (seperti Clustering) yang mencari pola tersembunyi tanpa label, Supervised Learning menggunakan dataset yang sudah memiliki label kelas (spesies) sebagai referensi untuk melatih model.
+
+Tujuan utama dari proyek ini adalah membangun model Klasifikasi, yaitu sebuah proses memprediksi label kelas (kategorikal/diskrit) untuk data baru yang belum pernah dilihat sebelumnya berdasarkan pola yang dipelajari dari data historis.
+
+> ![Penjelasan Tambahan](zz.png)
+
+### 1.2 Algoritma Naive Bayes
+Algoritma yang dipilih untuk proyek ini adalah Gaussian Naive Bayes. Algoritma ini didasarkan pada Teorema Bayes yang menghitung probabilitas posterior berdasarkan prior probability dan likelihood. Karakteristik utama Naive Bayes adalah asumsi independensi antar variabel, yang berarti kehadiran satu fitur tidak dipengaruhi oleh fitur lainnya. Varian Gaussian secara khusus digunakan dalam kasus ini karena atribut fisik bunga Iris (panjang dan lebar sepal/petal) bersifat kontinu dan diasumsikan mengikuti distribusi normal (Gaussian).
+
+### 1.3 Tahapan Persiapan Data (Data Preparation)
+Sebelum model dapat diimplementasikan, data harus melalui fase persiapan guna menjamin akurasi prediksi. Isu-isu utama dalam Data Preparation yang ditangani dalam alur kerja ini meliputi:
+
+-Data Cleaning: Memastikan data tidak memiliki nilai kosong (missing values) yang dapat mengganggu perhitungan probabilitas.
+
+-Data Transformation: Dalam skrip Python, data dikonversi dari format tabel KNIME menjadi struktur Pandas DataFrame agar dapat diolah oleh pustaka Scikit-Learn.
+
+-Data Splitting: Melakukan partisi dataset menjadi dua bagian utama:
+
+Training Set (70%): Digunakan oleh algoritma untuk mempelajari karakteristik tiap spesies.
+
+Testing Set (30%): Digunakan untuk mengevaluasi sejauh mana model mampu menggeneralisasi data baru tanpa terjadi overfitting.
+
+### 1.4 Pendekatan Integrasi KNIME dan Python
+Proyek ini mengadopsi pendekatan hibrida. Meskipun KNIME menyediakan node visual untuk klasifikasi, penggunaan KNIME Python Integration (melalui skrip sklearn.naive_bayes.GaussianNB) memberikan keunggulan berupa:
+
+Fleksibilitas Tinggi: Memungkinkan kustomisasi parameter algoritma yang tidak tersedia pada node standar.
+
+Efisiensi Skrip: Memanfaatkan efisiensi komputasi dari pustaka Scikit-Learn yang merupakan standar industri.
+
+Transparansi: Mempermudah dokumentasi logika pemodelan langsung di dalam kode untuk keperluan audit model atau riset lebih lanjut.
 ---
 
 ## 2. Spesifikasi Lingkungan Kerja dan Dataset

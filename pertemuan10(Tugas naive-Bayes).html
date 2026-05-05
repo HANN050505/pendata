@@ -395,7 +395,14 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laporan-analisis-klasifikasi-data-bunga-iris-menggunakan-algoritma-naive-bayes-melalui-integrasi-knime-dan-python">Laporan Analisis Klasifikasi Data Bunga Iris Menggunakan Algoritma Naive Bayes melalui Integrasi KNIME dan Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">1. Pendahuluan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">1. Pendahuluan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latar-belakang-dan-konsep-pembelajaran-terarah">1.1 Latar Belakang dan Konsep Pembelajaran Terarah</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-naive-bayes">1.2 Algoritma Naive Bayes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahapan-persiapan-data-data-preparation">1.3 Tahapan Persiapan Data (Data Preparation)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pendekatan-integrasi-knime-dan-python">1.4 Pendekatan Integrasi KNIME dan Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transparansi-mempermudah-dokumentasi-logika-pemodelan-langsung-di-dalam-kode-untuk-keperluan-audit-model-atau-riset-lebih-lanjut">Transparansi: Mempermudah dokumentasi logika pemodelan langsung di dalam kode untuk keperluan audit model atau riset lebih lanjut.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spesifikasi-lingkungan-kerja-dan-dataset">2. Spesifikasi Lingkungan Kerja dan Dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perangkat-dan-pustaka-tools-libraries">2.1. Perangkat dan Pustaka (Tools &amp; Libraries)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deskripsi-dataset">2.2. Deskripsi Dataset</a></li>
@@ -431,8 +438,37 @@ document.write(`
 <h2>1. Pendahuluan<a class="headerlink" href="#pendahuluan" title="Link to this heading">#</a></h2>
 <p>Proyek ini bertujuan untuk membangun model klasifikasi <em>machine learning</em> menggunakan algoritma <strong>Naive Bayes</strong>. Model ini dikembangkan untuk mengklasifikasikan spesies bunga Iris berdasarkan atribut fisiknya.</p>
 <p>Berbeda dengan pendekatan visual standar pada KNIME yang menggunakan <em>node</em> klasifikasi bawaan, proyek ini mengadopsi pendekatan berbasis <em>scripting</em> dengan memanfaatkan ekstensi <strong>KNIME Python Integration</strong>. Pemodelan dilakukan sepenuhnya di dalam <em>node</em> Python menggunakan pustaka <strong>Scikit-Learn</strong> (<code class="docutils literal notranslate"><span class="pre">sklearn.naive_bayes.GaussianNB</span></code>), yang memberikan fleksibilitas lebih tinggi dalam kustomisasi kode dan evaluasi model.</p>
+<section id="latar-belakang-dan-konsep-pembelajaran-terarah">
+<h3>1.1 Latar Belakang dan Konsep Pembelajaran Terarah<a class="headerlink" href="#latar-belakang-dan-konsep-pembelajaran-terarah" title="Link to this heading">#</a></h3>
+<p>Dalam disiplin Data Mining dan Machine Learning, terdapat dua paradigma utama pembelajaran: Supervised Learning dan Unsupervised Learning. Proyek klasifikasi bunga Iris ini termasuk dalam kategori Supervised Learning (pembelajaran terarah). Berbeda dengan Unsupervised Learning (seperti Clustering) yang mencari pola tersembunyi tanpa label, Supervised Learning menggunakan dataset yang sudah memiliki label kelas (spesies) sebagai referensi untuk melatih model.</p>
+<p>Tujuan utama dari proyek ini adalah membangun model Klasifikasi, yaitu sebuah proses memprediksi label kelas (kategorikal/diskrit) untuk data baru yang belum pernah dilihat sebelumnya berdasarkan pola yang dipelajari dari data historis.</p>
+<blockquote>
+<div><p><img alt="Penjelasan Tambahan" src="_images/zz.png" /></p>
+</div></blockquote>
 </section>
-<hr class="docutils" />
+<section id="algoritma-naive-bayes">
+<h3>1.2 Algoritma Naive Bayes<a class="headerlink" href="#algoritma-naive-bayes" title="Link to this heading">#</a></h3>
+<p>Algoritma yang dipilih untuk proyek ini adalah Gaussian Naive Bayes. Algoritma ini didasarkan pada Teorema Bayes yang menghitung probabilitas posterior berdasarkan prior probability dan likelihood. Karakteristik utama Naive Bayes adalah asumsi independensi antar variabel, yang berarti kehadiran satu fitur tidak dipengaruhi oleh fitur lainnya. Varian Gaussian secara khusus digunakan dalam kasus ini karena atribut fisik bunga Iris (panjang dan lebar sepal/petal) bersifat kontinu dan diasumsikan mengikuti distribusi normal (Gaussian).</p>
+</section>
+<section id="tahapan-persiapan-data-data-preparation">
+<h3>1.3 Tahapan Persiapan Data (Data Preparation)<a class="headerlink" href="#tahapan-persiapan-data-data-preparation" title="Link to this heading">#</a></h3>
+<p>Sebelum model dapat diimplementasikan, data harus melalui fase persiapan guna menjamin akurasi prediksi. Isu-isu utama dalam Data Preparation yang ditangani dalam alur kerja ini meliputi:</p>
+<p>-Data Cleaning: Memastikan data tidak memiliki nilai kosong (missing values) yang dapat mengganggu perhitungan probabilitas.</p>
+<p>-Data Transformation: Dalam skrip Python, data dikonversi dari format tabel KNIME menjadi struktur Pandas DataFrame agar dapat diolah oleh pustaka Scikit-Learn.</p>
+<p>-Data Splitting: Melakukan partisi dataset menjadi dua bagian utama:</p>
+<p>Training Set (70%): Digunakan oleh algoritma untuk mempelajari karakteristik tiap spesies.</p>
+<p>Testing Set (30%): Digunakan untuk mengevaluasi sejauh mana model mampu menggeneralisasi data baru tanpa terjadi overfitting.</p>
+</section>
+<section id="pendekatan-integrasi-knime-dan-python">
+<h3>1.4 Pendekatan Integrasi KNIME dan Python<a class="headerlink" href="#pendekatan-integrasi-knime-dan-python" title="Link to this heading">#</a></h3>
+<p>Proyek ini mengadopsi pendekatan hibrida. Meskipun KNIME menyediakan node visual untuk klasifikasi, penggunaan KNIME Python Integration (melalui skrip sklearn.naive_bayes.GaussianNB) memberikan keunggulan berupa:</p>
+<p>Fleksibilitas Tinggi: Memungkinkan kustomisasi parameter algoritma yang tidak tersedia pada node standar.</p>
+<p>Efisiensi Skrip: Memanfaatkan efisiensi komputasi dari pustaka Scikit-Learn yang merupakan standar industri.</p>
+</section>
+</section>
+<section id="transparansi-mempermudah-dokumentasi-logika-pemodelan-langsung-di-dalam-kode-untuk-keperluan-audit-model-atau-riset-lebih-lanjut">
+<h2>Transparansi: Mempermudah dokumentasi logika pemodelan langsung di dalam kode untuk keperluan audit model atau riset lebih lanjut.<a class="headerlink" href="#transparansi-mempermudah-dokumentasi-logika-pemodelan-langsung-di-dalam-kode-untuk-keperluan-audit-model-atau-riset-lebih-lanjut" title="Link to this heading">#</a></h2>
+</section>
 <section id="spesifikasi-lingkungan-kerja-dan-dataset">
 <h2>2. Spesifikasi Lingkungan Kerja dan Dataset<a class="headerlink" href="#spesifikasi-lingkungan-kerja-dan-dataset" title="Link to this heading">#</a></h2>
 <section id="perangkat-dan-pustaka-tools-libraries">
@@ -623,7 +659,14 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laporan-analisis-klasifikasi-data-bunga-iris-menggunakan-algoritma-naive-bayes-melalui-integrasi-knime-dan-python">Laporan Analisis Klasifikasi Data Bunga Iris Menggunakan Algoritma Naive Bayes melalui Integrasi KNIME dan Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">1. Pendahuluan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">1. Pendahuluan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latar-belakang-dan-konsep-pembelajaran-terarah">1.1 Latar Belakang dan Konsep Pembelajaran Terarah</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-naive-bayes">1.2 Algoritma Naive Bayes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tahapan-persiapan-data-data-preparation">1.3 Tahapan Persiapan Data (Data Preparation)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pendekatan-integrasi-knime-dan-python">1.4 Pendekatan Integrasi KNIME dan Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transparansi-mempermudah-dokumentasi-logika-pemodelan-langsung-di-dalam-kode-untuk-keperluan-audit-model-atau-riset-lebih-lanjut">Transparansi: Mempermudah dokumentasi logika pemodelan langsung di dalam kode untuk keperluan audit model atau riset lebih lanjut.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spesifikasi-lingkungan-kerja-dan-dataset">2. Spesifikasi Lingkungan Kerja dan Dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perangkat-dan-pustaka-tools-libraries">2.1. Perangkat dan Pustaka (Tools &amp; Libraries)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deskripsi-dataset">2.2. Deskripsi Dataset</a></li>
