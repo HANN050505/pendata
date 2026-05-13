@@ -1,0 +1,844 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Laporan Proyek &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pertemuan12';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Pertemuan 11" href="pertemuan11.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pertemuan1.html">Pertemuan 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pertemuan2.html">Pertemuan 2</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="pertemuan3.html">Pertemuan 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pertemuan4.html">Pertemuan 4</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="pertemuan5%28soal%20missing%20value%29.html">pertemuan 5</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="pertemuan8UTS.html">Pertemuan 8 UTS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pertemuan10%28Tugas%20naive-Bayes%29.html">Pertemuan 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pertemuan11.html">Pertemuan 11</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Laporan Proyek</a></li>
+
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpertemuan12.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/pertemuan12.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Laporan Proyek</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Laporan Proyek</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-random-forest-menggunakan-dataset-playtennis-di-knime">Implementasi Random Forest Menggunakan Dataset PlayTennis di KNIME</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">1. Pendahuluan</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-playtennis">2. Dataset PlayTennis</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-random-forest-di-knime">3. Workflow Random Forest di KNIME</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-tiap-node">4. Penjelasan Tiap Node</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excel-reader">4.1 Excel Reader</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-partitioner">4.2 Table Partitioner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest-learner">4.3 Random Forest Learner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest-predictor">4.4 Random Forest Predictor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scorer">4.5 Scorer</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-confusion-matrix">5. Hasil Confusion Matrix</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-accuracy">6. Perhitungan Accuracy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-hasil">7. Analisis Hasil</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-sangat-kecil">7.1 Dataset Sangat Kecil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-testing-tidak-seimbang">7.2 Data Testing Tidak Seimbang</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembagian-data-secara-random">7.3 Pembagian Data Secara Random</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest-lebih-cocok-untuk-dataset-besar">7.4 Random Forest Lebih Cocok untuk Dataset Besar</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perbandingan-dengan-decision-tree">8. Perbandingan dengan Decision Tree</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">9. Kesimpulan</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="laporan-proyek">
+<h1>Laporan Proyek<a class="headerlink" href="#laporan-proyek" title="Link to this heading">#</a></h1>
+<section id="implementasi-random-forest-menggunakan-dataset-playtennis-di-knime">
+<h2>Implementasi Random Forest Menggunakan Dataset PlayTennis di KNIME<a class="headerlink" href="#implementasi-random-forest-menggunakan-dataset-playtennis-di-knime" title="Link to this heading">#</a></h2>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="pendahuluan">
+<h1>1. Pendahuluan<a class="headerlink" href="#pendahuluan" title="Link to this heading">#</a></h1>
+<p>Pada praktikum ini dilakukan implementasi algoritma Random Forest menggunakan aplikasi KNIME menggunakan dataset PlayTennis.
+Workflow dibangun secara visual menggunakan beberapa node utama seperti Excel Reader, Table Partitioner, Random Forest Learner, Random Forest Predictor, dan Scorer.
+Tujuan utama praktikum ini adalah membangun model klasifikasi untuk menentukan apakah permainan tenis dapat dilakukan atau tidak berdasarkan kondisi cuaca.
+Selain itu dilakukan juga analisis hasil confusion matrix serta perbandingan dengan algoritma Decision Tree yang sebelumnya telah digunakan.</p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="dataset-playtennis">
+<h1>2. Dataset PlayTennis<a class="headerlink" href="#dataset-playtennis" title="Link to this heading">#</a></h1>
+<p>Dataset PlayTennis merupakan dataset klasifikasi sederhana yang berisi data kondisi cuaca dan keputusan bermain tenis.</p>
+<p>Dataset memiliki atribut:</p>
+<ul class="simple">
+<li><p>Outlook</p></li>
+<li><p>Temperature</p></li>
+<li><p>Humidity</p></li>
+<li><p>Wind</p></li>
+</ul>
+<p>Target klasifikasi:</p>
+<ul class="simple">
+<li><p>PlayTennis (Yes / No)</p></li>
+</ul>
+<p>Contoh data:</p>
+<ul class="simple">
+<li><p>Sunny, Hot, High, Weak → No</p></li>
+<li><p>Rain, Mild, Normal, Weak → Yes</p></li>
+</ul>
+<p>Dataset ini termasuk dataset kategorikal karena sebagian besar atribut berbentuk kategori teks.</p>
+<hr class="docutils" />
+<p><img alt="Dataset PlayTennis" src="_images/dataset-playtennis.png" /></p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="workflow-random-forest-di-knime">
+<h1>3. Workflow Random Forest di KNIME<a class="headerlink" href="#workflow-random-forest-di-knime" title="Link to this heading">#</a></h1>
+<p>Workflow yang digunakan terdiri dari beberapa node utama:</p>
+<ol class="arabic simple">
+<li><p>Excel Reader</p></li>
+<li><p>Table Partitioner</p></li>
+<li><p>Random Forest Learner</p></li>
+<li><p>Random Forest Predictor</p></li>
+<li><p>Scorer</p></li>
+</ol>
+<p>Alur workflow:</p>
+<ul class="simple">
+<li><p>membaca dataset</p></li>
+<li><p>membagi data training dan testing</p></li>
+<li><p>membangun model Random Forest</p></li>
+<li><p>melakukan prediksi</p></li>
+<li><p>mengevaluasi hasil klasifikasi</p></li>
+</ul>
+<p>Workflow ini menggunakan pendekatan visual sehingga seluruh proses machine learning dapat dilakukan tanpa coding manual.</p>
+<hr class="docutils" />
+<blockquote>
+<div><p><img alt="Workflow KNIM" src="_images/q.png" /></p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="penjelasan-tiap-node">
+<h1>4. Penjelasan Tiap Node<a class="headerlink" href="#penjelasan-tiap-node" title="Link to this heading">#</a></h1>
+<section id="excel-reader">
+<h2>4.1 Excel Reader<a class="headerlink" href="#excel-reader" title="Link to this heading">#</a></h2>
+<p>Node Excel Reader digunakan untuk membaca dataset PlayTennis dari file Excel.
+Dataset yang berhasil dibaca kemudian diubah menjadi tabel KNIME agar dapat diproses pada node berikutnya.</p>
+<hr class="docutils" />
+<p><img alt="Excel Reader" src="_images/excel-reader.png" /></p>
+</section>
+<hr class="docutils" />
+<section id="table-partitioner">
+<h2>4.2 Table Partitioner<a class="headerlink" href="#table-partitioner" title="Link to this heading">#</a></h2>
+<p>Node Table Partitioner digunakan untuk membagi dataset menjadi data training dan data testing.
+Pada workflow ini data dibagi secara random untuk melatih dan menguji model Random Forest.
+Data training digunakan untuk membangun model, sedangkan data testing digunakan untuk mengevaluasi performa model.</p>
+<hr class="docutils" />
+<p><img alt="Table Partitioner" src="_images/table-partitioner.png" /></p>
+</section>
+<hr class="docutils" />
+<section id="random-forest-learner">
+<h2>4.3 Random Forest Learner<a class="headerlink" href="#random-forest-learner" title="Link to this heading">#</a></h2>
+<p>Node Random Forest Learner digunakan untuk membangun model klasifikasi Random Forest.
+Random Forest bekerja dengan membentuk banyak decision tree secara otomatis dari data training.
+Setiap tree akan menghasilkan prediksi masing-masing, kemudian hasil akhir ditentukan menggunakan voting mayoritas.</p>
+<p>Karena menggunakan banyak tree, Random Forest biasanya:</p>
+<ul class="simple">
+<li><p>lebih stabil</p></li>
+<li><p>lebih tahan overfitting</p></li>
+<li><p>memiliki generalisasi yang lebih baik</p></li>
+</ul>
+<p>dibandingkan Decision Tree biasa.</p>
+<hr class="docutils" />
+<p><img alt="Random Forest Learner" src="_images/randomforest-learner.png" /></p>
+</section>
+<hr class="docutils" />
+<section id="random-forest-predictor">
+<h2>4.4 Random Forest Predictor<a class="headerlink" href="#random-forest-predictor" title="Link to this heading">#</a></h2>
+<p>Node Random Forest Predictor digunakan untuk melakukan prediksi terhadap data testing menggunakan model yang telah dibuat sebelumnya.</p>
+<p>Output node ini menghasilkan:</p>
+<ul class="simple">
+<li><p>label asli</p></li>
+<li><p>hasil prediksi model</p></li>
+</ul>
+<p>Dari hasil tersebut dapat diketahui apakah prediksi model benar atau salah.</p>
+<hr class="docutils" />
+<p><img alt="Random Forest Predictor" src="randomforest-predictor.png" /></p>
+</section>
+<hr class="docutils" />
+<section id="scorer">
+<h2>4.5 Scorer<a class="headerlink" href="#scorer" title="Link to this heading">#</a></h2>
+<p>Node Scorer digunakan untuk mengevaluasi performa model klasifikasi.</p>
+<p>Scorer menghasilkan:</p>
+<ul class="simple">
+<li><p>confusion matrix</p></li>
+<li><p>accuracy statistics</p></li>
+</ul>
+<p>Confusion matrix digunakan untuk melihat jumlah prediksi benar dan salah dari model.</p>
+<hr class="docutils" />
+<p><img alt="Scorer" src="_images/scorer.png" /></p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="hasil-confusion-matrix">
+<h1>5. Hasil Confusion Matrix<a class="headerlink" href="#hasil-confusion-matrix" title="Link to this heading">#</a></h1>
+<p>Berikut hasil confusion matrix dari workflow Random Forest:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Aktual</p></th>
+<th class="head"><p>Prediksi Yes</p></th>
+<th class="head"><p>Prediksi No</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Yes</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>No</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Interpretasi hasil:</p>
+<ul class="simple">
+<li><p>terdapat 1 data Yes yang berhasil diprediksi dengan benar</p></li>
+<li><p>terdapat 1 data Yes yang salah diprediksi menjadi No</p></li>
+<li><p>tidak terdapat data kelas No pada data testing</p></li>
+</ul>
+<p>Hal ini menunjukkan bahwa data testing yang digunakan sangat sedikit dan distribusi kelas belum seimbang.
+Akibatnya evaluasi model belum sepenuhnya merepresentasikan kemampuan klasifikasi Random Forest.</p>
+<hr class="docutils" />
+<p><img alt="Confusion Matrix" src="_images/confusion-matrix.png" /></p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="perhitungan-accuracy">
+<h1>6. Perhitungan Accuracy<a class="headerlink" href="#perhitungan-accuracy" title="Link to this heading">#</a></h1>
+<p>Accuracy digunakan untuk mengukur tingkat ketepatan prediksi model.
+Rumus accuracy:</p>
+<p>Accuracy = jumlah prediksi benar / total data testing</p>
+<p>Perhitungan berdasarkan confusion matrix:</p>
+<ul class="simple">
+<li><p>prediksi benar = 1</p></li>
+<li><p>total data testing = 2</p></li>
+</ul>
+<p>Maka:
+Accuracy = 1 / 2 = 0.5 = 50%
+Model menghasilkan accuracy sebesar 50%.</p>
+<p>Nilai accuracy tersebut dipengaruhi oleh:</p>
+<ul class="simple">
+<li><p>jumlah dataset yang kecil</p></li>
+<li><p>data testing yang tidak seimbang</p></li>
+<li><p>distribusi kelas yang kurang merata</p></li>
+</ul>
+<hr class="docutils" />
+<p><img alt="Accuracy Statistics" src="_images/accuracy-statistics.png" /></p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="analisis-hasil">
+<h1>7. Analisis Hasil<a class="headerlink" href="#analisis-hasil" title="Link to this heading">#</a></h1>
+<p>Hasil implementasi menunjukkan bahwa model Random Forest berhasil dijalankan dengan baik pada workflow KNIME.
+Namun accuracy model masih rendah yaitu sebesar 50%.
+Beberapa penyebabnya:</p>
+<section id="dataset-sangat-kecil">
+<h2>7.1 Dataset Sangat Kecil<a class="headerlink" href="#dataset-sangat-kecil" title="Link to this heading">#</a></h2>
+<p>Dataset PlayTennis hanya memiliki sekitar 14 data sehingga model belum memperoleh cukup data untuk mempelajari pola secara optimal.</p>
+</section>
+<hr class="docutils" />
+<section id="data-testing-tidak-seimbang">
+<h2>7.2 Data Testing Tidak Seimbang<a class="headerlink" href="#data-testing-tidak-seimbang" title="Link to this heading">#</a></h2>
+<p>Pada confusion matrix terlihat bahwa data testing hanya berisi kelas Yes.
+Akibatnya model tidak diuji terhadap kelas No sehingga evaluasi model belum maksimal.</p>
+</section>
+<hr class="docutils" />
+<section id="pembagian-data-secara-random">
+<h2>7.3 Pembagian Data Secara Random<a class="headerlink" href="#pembagian-data-secara-random" title="Link to this heading">#</a></h2>
+<p>Karena pembagian dilakukan secara random, kemungkinan distribusi data training dan testing tidak merata.
+Hal ini dapat mempengaruhi performa model.</p>
+</section>
+<hr class="docutils" />
+<section id="random-forest-lebih-cocok-untuk-dataset-besar">
+<h2>7.4 Random Forest Lebih Cocok untuk Dataset Besar<a class="headerlink" href="#random-forest-lebih-cocok-untuk-dataset-besar" title="Link to this heading">#</a></h2>
+<p>Random Forest sebenarnya lebih efektif digunakan pada dataset besar karena bekerja menggunakan banyak decision tree.
+Pada dataset kecil seperti PlayTennis, peningkatan performa dibanding Decision Tree belum terlalu terlihat.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="perbandingan-dengan-decision-tree">
+<h1>8. Perbandingan dengan Decision Tree<a class="headerlink" href="#perbandingan-dengan-decision-tree" title="Link to this heading">#</a></h1>
+<p>Sebelumnya dilakukan implementasi menggunakan algoritma Decision Tree.
+Perbedaan utama kedua metode:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Decision Tree</p></th>
+<th class="head"><p>Random Forest</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Menggunakan satu tree</p></td>
+<td><p>Menggunakan banyak tree</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lebih sederhana</p></td>
+<td><p>Lebih kompleks</p></td>
+</tr>
+<tr class="row-even"><td><p>Mudah dipahami</p></td>
+<td><p>Lebih sulit dianalisis</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rentan overfitting</p></td>
+<td><p>Lebih tahan overfitting</p></td>
+</tr>
+<tr class="row-even"><td><p>Cepat diproses</p></td>
+<td><p>Lebih lambat</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Decision Tree bekerja dengan membentuk satu pohon keputusan berdasarkan atribut terbaik.
+Sedangkan Random Forest membentuk banyak decision tree lalu menggabungkan seluruh hasil prediksi menggunakan voting mayoritas.
+Pada dataset kecil seperti PlayTennis, performa kedua metode belum memiliki perbedaan signifikan karena jumlah data sangat sedikit.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="kesimpulan">
+<h1>9. Kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h1>
+<p>Implementasi Random Forest menggunakan KNIME berhasil dilakukan dengan baik menggunakan workflow berbasis visual.</p>
+<p>Workflow terdiri dari:</p>
+<ul class="simple">
+<li><p>Excel Reader</p></li>
+<li><p>Table Partitioner</p></li>
+<li><p>Random Forest Learner</p></li>
+<li><p>Random Forest Predictor</p></li>
+<li><p>Scorer</p></li>
+</ul>
+<p>Model berhasil melakukan proses training, prediksi, dan evaluasi.
+Berdasarkan confusion matrix diperoleh accuracy sebesar 50%.
+Nilai accuracy dipengaruhi oleh ukuran dataset yang kecil serta distribusi data testing yang tidak seimbang.
+Dibandingkan Decision Tree, Random Forest memiliki struktur yang lebih kompleks dan lebih cocok digunakan pada dataset besar karena mampu mengurangi overfitting dan meningkatkan stabilitas model.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pertemuan11.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Pertemuan 11</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Laporan Proyek</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-random-forest-menggunakan-dataset-playtennis-di-knime">Implementasi Random Forest Menggunakan Dataset PlayTennis di KNIME</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">1. Pendahuluan</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-playtennis">2. Dataset PlayTennis</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-random-forest-di-knime">3. Workflow Random Forest di KNIME</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-tiap-node">4. Penjelasan Tiap Node</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excel-reader">4.1 Excel Reader</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-partitioner">4.2 Table Partitioner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest-learner">4.3 Random Forest Learner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest-predictor">4.4 Random Forest Predictor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scorer">4.5 Scorer</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-confusion-matrix">5. Hasil Confusion Matrix</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-accuracy">6. Perhitungan Accuracy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-hasil">7. Analisis Hasil</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-sangat-kecil">7.1 Dataset Sangat Kecil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-testing-tidak-seimbang">7.2 Data Testing Tidak Seimbang</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembagian-data-secara-random">7.3 Pembagian Data Secara Random</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest-lebih-cocok-untuk-dataset-besar">7.4 Random Forest Lebih Cocok untuk Dataset Besar</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perbandingan-dengan-decision-tree">8. Perbandingan dengan Decision Tree</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">9. Kesimpulan</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
