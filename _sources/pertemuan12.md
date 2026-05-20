@@ -1,9 +1,4 @@
----
-title: "Pertemuan 11: Implementasi Random Forest Menggunakan Dataset PlayTennis"
-date: 2026-05-06
-tags: [Machine Learning, Data Mining, KNIME, Random Forest, Decision Tree]
----
-
+# pertemuan 12
 # Laporan Proyek
 ## Implementasi Random Forest Menggunakan Dataset PlayTennis di KNIME
 
