@@ -1,0 +1,2160 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Analisis dan Prediksi Performa Akademik Mahasiswa Menggunakan Algoritma Klasifikasi &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pertemuan16';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="pertemuan 15" href="pertemuan15.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pertemuan1.html">Pertemuan 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pertemuan2.html">Pertemuan 2</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="pertemuan3.html">Pertemuan 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pertemuan4.html">Pertemuan 4</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="pertemuan5%28soal%20missing%20value%29.html">pertemuan 5</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="pertemuan8UTS.html">Pertemuan 8 UTS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pertemuan10%28Tugas%20naive-Bayes%29.html">Pertemuan 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pertemuan11.html">Pertemuan 11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pertemuan12.html">pertemuan 12</a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="pertemuan13.html">pertemuan 13</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="pertemuan14.html">Peramalan Kadar Nitrogen Dioksida (NO₂) di Kabupaten Bangkalan Menggunakan Algoritma K-Nearest Neighbor (KNN)</a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="pertemuan15.html">pertemuan 15</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Analisis dan Prediksi Performa Akademik Mahasiswa Menggunakan Algoritma Klasifikasi</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpertemuan16.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/pertemuan16.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Analisis dan Prediksi Performa Akademik Mahasiswa Menggunakan Algoritma Klasifikasi</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Analisis dan Prediksi Performa Akademik Mahasiswa Menggunakan Algoritma Klasifikasi</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstrak">Abstrak</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">1. Pendahuluan</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latar-belakang">1.1 Latar Belakang</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bab-2-deskripsi-dataset-dan-data-preprocessing">BAB 2. DESKRIPSI DATASET DAN DATA PREPROCESSING</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deskripsi-dataset">2.1 Deskripsi Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#informasi-dataset">2.1.1 Informasi Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#struktur-dataset">2.1.2 Struktur Dataset</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-variabel-target">2.2 Analisis Variabel Target</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-nilai-mahasiswa">Distribusi Nilai Mahasiswa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretasi">Interpretasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretasi-visualisasi">Interpretasi Visualisasi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing">2.3 Data Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemeriksaan-missing-value">2.4 Pemeriksaan Missing Value</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil">Hasil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Interpretasi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemeriksaan-data-duplikat">2.5 Pemeriksaan Data Duplikat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Hasil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Interpretasi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penghapusan-atribut-tidak-relevan">2.6 Penghapusan Atribut Tidak Relevan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi">Implementasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alasan-penghapusan">Alasan Penghapusan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemisahan-variabel-fitur-dan-target">2.7 Pemisahan Variabel Fitur dan Target</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Implementasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan">Penjelasan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembagian-data-training-dan-testing">2.8 Pembagian Data Training dan Testing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Implementasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Penjelasan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-tahap-preprocessing">2.9 Ringkasan Tahap Preprocessing</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bab-3-exploratory-data-analysis-eda">BAB 3. EXPLORATORY DATA ANALYSIS (EDA)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.1 Pendahuluan</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statistik-deskriptif">3.2 Statistik Deskriptif</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Interpretasi</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-distribusi-nilai-mahasiswa">3.3 Analisis Distribusi Nilai Mahasiswa</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-3-1-distribusi-nilai-mahasiswa">Gambar 3.1 Distribusi Nilai Mahasiswa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insight">Insight</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-distribusi-setiap-fitur">3.4 Analisis Distribusi Setiap Fitur</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-3-2-histogram-seluruh-variabel">Gambar 3.2 Histogram Seluruh Variabel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Insight</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-outlier-menggunakan-boxplot">3.5 Analisis Outlier Menggunakan Boxplot</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-3-3-boxplot-dataset">Gambar 3.3 Boxplot Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Insight</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-korelasi-antar-variabel">3.6 Analisis Korelasi Antar Variabel</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-3-4-correlation-heatmap">Gambar 3.4 Correlation Heatmap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Insight</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pairplot">3.7 Pairplot</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-3-5-pairplot">Gambar 3.5 Pairplot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Interpretasi</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-variabel-target-terhadap-fitur">3.8 Analisis Variabel Target terhadap Fitur</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-3-6-hubungan-course-id-terhadap-grade">Gambar 3.6 Hubungan COURSE ID terhadap GRADE</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Interpretasi</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-hasil-eda">3.9 Ringkasan Hasil EDA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-eda">3.10 Kesimpulan EDA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bab-4-implementasi-dan-hasil-klasifikasi">BAB 4. IMPLEMENTASI DAN HASIL KLASIFIKASI</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">4.1 Pendahuluan</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapan-data">4.2 Persiapan Data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Penjelasan</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-menggunakan-decision-tree">4.3 Klasifikasi Menggunakan Decision Tree</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teori-decision-tree">4.3.1 Teori Decision Tree</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">4.3.2 Implementasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sumber-kode">Sumber Kode</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model">4.3.3 Evaluasi Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">4.3.4 Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix">4.3.5 Confusion Matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Interpretasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-menggunakan-random-forest">4.4 Klasifikasi Menggunakan Random Forest</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teori-random-forest">4.4.1 Teori Random Forest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">4.4.2 Implementasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Sumber Kode</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">4.4.3 Evaluasi Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">4.4.4 Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">4.4.5 Confusion Matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">Interpretasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-menggunakan-k-nearest-neighbor-knn">4.5 Klasifikasi Menggunakan K-Nearest Neighbor (KNN)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teori-knn">4.5.1 Teori KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">4.5.2 Implementasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">Sumber Kode</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">4.5.3 Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">4.5.4 Confusion Matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">Interpretasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-menggunakan-naive-bayes">4.6 Klasifikasi Menggunakan Naive Bayes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teori-naive-bayes">4.6.1 Teori Naive Bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">4.6.2 Implementasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">Sumber Kode</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id45">4.6.3 Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id46">4.6.4 Confusion Matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id47">Interpretasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perbandingan-model">4.7 Perbandingan Model</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-perbandingan">Hasil Perbandingan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-perbandingan-accuracy">Visualisasi Perbandingan Accuracy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id48">Interpretasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#model-terbaik">4.8 Model Terbaik</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree">Decision Tree</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-bab">4.9 Kesimpulan Bab</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="analisis-dan-prediksi-performa-akademik-mahasiswa-menggunakan-algoritma-klasifikasi">
+<h1>Analisis dan Prediksi Performa Akademik Mahasiswa Menggunakan Algoritma Klasifikasi<a class="headerlink" href="#analisis-dan-prediksi-performa-akademik-mahasiswa-menggunakan-algoritma-klasifikasi" title="Link to this heading">#</a></h1>
+<section id="abstrak">
+<h2>Abstrak<a class="headerlink" href="#abstrak" title="Link to this heading">#</a></h2>
+<p>Perkembangan teknologi informasi telah menghasilkan data dalam jumlah besar yang dapat dimanfaatkan untuk memperoleh informasi berharga melalui proses penambangan data (data mining). Salah satu bidang yang dapat memanfaatkan teknologi tersebut adalah bidang pendidikan. Analisis terhadap data akademik mahasiswa dapat membantu institusi pendidikan dalam memahami faktor-faktor yang memengaruhi keberhasilan belajar serta memprediksi performa akademik mahasiswa di masa mendatang.</p>
+<p>Penelitian ini bertujuan untuk menganalisis faktor-faktor yang memengaruhi performa akademik mahasiswa dan membangun model prediksi nilai akhir mahasiswa menggunakan teknik klasifikasi. Dataset yang digunakan merupakan dataset Student Performance yang terdiri dari 145 data mahasiswa dengan 33 atribut. Variabel target yang digunakan adalah GRADE yang merepresentasikan nilai akhir mahasiswa.</p>
+<p>Tahapan penelitian meliputi data preprocessing, exploratory data analysis (EDA), pembangunan model klasifikasi menggunakan Decision Tree, Random Forest, K-Nearest Neighbor (KNN), dan Naive Bayes, serta evaluasi model menggunakan metrik Accuracy, Precision, Recall, dan F1-Score.</p>
+<p>Hasil penelitian menunjukkan bahwa algoritma Decision Tree dan Random Forest memberikan performa terbaik dibandingkan algoritma lainnya. Selain itu, analisis feature importance menunjukkan bahwa beberapa atribut memiliki kontribusi yang lebih besar dalam menentukan nilai akhir mahasiswa.</p>
+<p><strong>Kata Kunci:</strong> Data Mining, Klasifikasi, Student Performance, Decision Tree, Random Forest, KNN, Naive Bayes.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="pendahuluan">
+<h1>1. Pendahuluan<a class="headerlink" href="#pendahuluan" title="Link to this heading">#</a></h1>
+<section id="latar-belakang">
+<h2>1.1 Latar Belakang<a class="headerlink" href="#latar-belakang" title="Link to this heading">#</a></h2>
+<p>Perkembangan teknologi informasi dan komunikasi telah mendorong peningkatan jumlah data yang dihasilkan setiap hari. Data tersebut berasal dari berbagai bidang, termasuk pendidikan. Institusi pendidikan saat ini menyimpan berbagai jenis data akademik yang berkaitan dengan aktivitas belajar mahasiswa, mulai dari data kehadiran, aktivitas belajar, kondisi sosial ekonomi, hingga nilai akademik.</p>
+<p>Data yang tersimpan dalam jumlah besar tersebut memiliki potensi untuk menghasilkan informasi yang berguna apabila dianalisis menggunakan metode yang tepat. Salah satu metode yang dapat digunakan adalah data mining. Data mining merupakan proses menemukan pola, hubungan, atau informasi tersembunyi dari kumpulan data yang besar menggunakan teknik statistik, machine learning, dan kecerdasan buatan.</p>
+<p>Dalam dunia pendidikan, penerapan data mining dikenal sebagai Educational Data Mining (EDM). Pendekatan ini memungkinkan institusi pendidikan untuk memahami perilaku belajar mahasiswa, mengidentifikasi faktor-faktor yang memengaruhi keberhasilan akademik, serta memprediksi performa mahasiswa di masa depan. Informasi tersebut dapat digunakan sebagai dasar pengambilan keputusan untuk meningkatkan kualitas pembelajaran dan layanan pendidikan.</p>
+<p>Prediksi performa akademik mahasiswa merupakan salah satu permasalahan yang sering diteliti dalam bidang Educational Data Mining. Kemampuan memprediksi nilai mahasiswa dapat membantu dosen dan institusi pendidikan dalam memberikan intervensi lebih awal kepada mahasiswa yang berpotensi mengalami kesulitan akademik. Dengan demikian, tingkat keberhasilan studi mahasiswa dapat ditingkatkan.</p>
+<p>Pada penelitian ini digunakan dataset Student Performance yang berisi berbagai atribut yang menggambarkan karakteristik mahasiswa. Dataset tersebut dianalisis menggunakan beberapa algoritma klasifikasi yaitu Decision Tree, Random Forest, K-Nearest Neighbor (KNN), dan Naive Bayes. Perbandingan performa dari setiap algoritma dilakukan untuk menentukan model yang paling efektif dalam memprediksi nilai akhir mahasiswa.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="bab-2-deskripsi-dataset-dan-data-preprocessing">
+<h1>BAB 2. DESKRIPSI DATASET DAN DATA PREPROCESSING<a class="headerlink" href="#bab-2-deskripsi-dataset-dan-data-preprocessing" title="Link to this heading">#</a></h1>
+<section id="deskripsi-dataset">
+<h2>2.1 Deskripsi Dataset<a class="headerlink" href="#deskripsi-dataset" title="Link to this heading">#</a></h2>
+<p>Dataset yang digunakan dalam penelitian ini adalah dataset <strong>Student Performance</strong> yang berisi informasi mengenai karakteristik mahasiswa serta nilai akhir yang diperoleh pada suatu mata kuliah. Dataset ini digunakan untuk melakukan analisis dan prediksi performa akademik mahasiswa menggunakan teknik klasifikasi.</p>
+<p>Secara umum, dataset ini memuat berbagai atribut yang berkaitan dengan kondisi akademik, sosial, dan perilaku belajar mahasiswa yang diduga memiliki pengaruh terhadap nilai akhir yang diperoleh.</p>
+<section id="informasi-dataset">
+<h3>2.1.1 Informasi Dataset<a class="headerlink" href="#informasi-dataset" title="Link to this heading">#</a></h3>
+<p>Berdasarkan hasil eksplorasi awal, diperoleh informasi sebagai berikut:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Keterangan</p></th>
+<th class="head"><p>Nilai</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Jumlah Baris (Records)</p></td>
+<td><p>145</p></td>
+</tr>
+<tr class="row-odd"><td><p>Jumlah Kolom (Attributes)</p></td>
+<td><p>33</p></td>
+</tr>
+<tr class="row-even"><td><p>Jumlah Fitur Prediktor</p></td>
+<td><p>32</p></td>
+</tr>
+<tr class="row-odd"><td><p>Variabel Target</p></td>
+<td><p>GRADE</p></td>
+</tr>
+<tr class="row-even"><td><p>Missing Value</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data Duplikat</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Dataset terdiri atas satu variabel target yaitu <strong>GRADE</strong> yang menunjukkan nilai akhir mahasiswa serta sejumlah atribut prediktor yang digunakan untuk membangun model klasifikasi.</p>
+</section>
+<section id="struktur-dataset">
+<h3>2.1.2 Struktur Dataset<a class="headerlink" href="#struktur-dataset" title="Link to this heading">#</a></h3>
+<p>Beberapa atribut yang terdapat pada dataset antara lain:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>No</p></th>
+<th class="head"><p>Atribut</p></th>
+<th class="head"><p>Keterangan</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>STUDENT ID</p></td>
+<td><p>Identitas mahasiswa</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>COURSE ID</p></td>
+<td><p>Identitas mata kuliah</p></td>
+</tr>
+<tr class="row-even"><td><p>3-32</p></td>
+<td><p>Berbagai karakteristik mahasiswa</p></td>
+<td><p>Variabel prediktor</p></td>
+</tr>
+<tr class="row-odd"><td><p>33</p></td>
+<td><p>GRADE</p></td>
+<td><p>Nilai akhir mahasiswa</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Variabel <strong>GRADE</strong> digunakan sebagai target klasifikasi karena merepresentasikan hasil akademik mahasiswa yang ingin diprediksi.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="analisis-variabel-target">
+<h2>2.2 Analisis Variabel Target<a class="headerlink" href="#analisis-variabel-target" title="Link to this heading">#</a></h2>
+<p>Sebelum dilakukan proses pemodelan, perlu dilakukan analisis terhadap distribusi variabel target untuk mengetahui keseimbangan data.</p>
+<section id="distribusi-nilai-mahasiswa">
+<h3>Distribusi Nilai Mahasiswa<a class="headerlink" href="#distribusi-nilai-mahasiswa" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Grade</p></th>
+<th class="head"><p>Jumlah Mahasiswa</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>35</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>24</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>21</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>13</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>17</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="interpretasi">
+<h3>Interpretasi<a class="headerlink" href="#interpretasi" title="Link to this heading">#</a></h3>
+<p>Berdasarkan distribusi tersebut, terlihat bahwa:</p>
+<ul class="simple">
+<li><p>Kelas <strong>1</strong> merupakan kelas dengan jumlah data terbanyak.</p></li>
+<li><p>Kelas <strong>0</strong> merupakan kelas dengan jumlah data paling sedikit.</p></li>
+<li><p>Dataset memiliki distribusi kelas yang relatif tidak seimbang (imbalanced dataset).</p></li>
+<li><p>Ketidakseimbangan kelas dapat memengaruhi performa model klasifikasi.</p></li>
+</ul>
+<p>Visualisasi distribusi target dapat dibuat menggunakan kode berikut:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GRADE&#39;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribusi Nilai Mahasiswa&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Grade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Jumlah Mahasiswa&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="interpretasi-visualisasi">
+<h3>Interpretasi Visualisasi<a class="headerlink" href="#interpretasi-visualisasi" title="Link to this heading">#</a></h3>
+<p>Grafik distribusi menunjukkan bahwa sebagian besar mahasiswa berada pada kategori nilai rendah hingga menengah. Jumlah mahasiswa dengan nilai sangat tinggi relatif lebih sedikit dibandingkan kategori lainnya.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="data-preprocessing">
+<h2>2.3 Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Link to this heading">#</a></h2>
+<p>Data preprocessing merupakan tahapan penting dalam proses data mining karena kualitas data sangat memengaruhi hasil model yang dibangun.</p>
+<p>Tahapan preprocessing yang dilakukan meliputi:</p>
+<ol class="arabic simple">
+<li><p>Pemeriksaan missing value.</p></li>
+<li><p>Pemeriksaan data duplikat.</p></li>
+<li><p>Penghapusan atribut yang tidak relevan.</p></li>
+<li><p>Pemisahan fitur dan target.</p></li>
+<li><p>Pembagian data training dan testing.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="pemeriksaan-missing-value">
+<h2>2.4 Pemeriksaan Missing Value<a class="headerlink" href="#pemeriksaan-missing-value" title="Link to this heading">#</a></h2>
+<p>Missing value merupakan kondisi ketika suatu atribut tidak memiliki nilai.</p>
+<p>Pemeriksaan dilakukan menggunakan kode berikut:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+<section id="hasil">
+<h3>Hasil<a class="headerlink" href="#hasil" title="Link to this heading">#</a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Total Missing Value = 0
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h3>Interpretasi<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Hasil pemeriksaan menunjukkan bahwa dataset tidak memiliki missing value sehingga tidak diperlukan proses imputasi data.</p>
+<p>Keuntungan dari kondisi ini adalah seluruh data dapat langsung digunakan pada tahap analisis dan pemodelan.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="pemeriksaan-data-duplikat">
+<h2>2.5 Pemeriksaan Data Duplikat<a class="headerlink" href="#pemeriksaan-data-duplikat" title="Link to this heading">#</a></h2>
+<p>Data duplikat dapat menyebabkan bias dalam proses pembelajaran model.</p>
+<p>Pemeriksaan dilakukan menggunakan kode berikut:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">duplicate_rows</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="s2">&quot;Jumlah Data Duplikat:&quot;</span><span class="p">,</span>
+    <span class="n">duplicate_rows</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<section id="id2">
+<h3>Hasil<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Jumlah Data Duplikat: 0
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h3>Interpretasi<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Tidak ditemukan data duplikat pada dataset sehingga seluruh data dapat digunakan untuk proses analisis.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="penghapusan-atribut-tidak-relevan">
+<h2>2.6 Penghapusan Atribut Tidak Relevan<a class="headerlink" href="#penghapusan-atribut-tidak-relevan" title="Link to this heading">#</a></h2>
+<p>Kolom <strong>STUDENT ID</strong> hanya berfungsi sebagai identitas mahasiswa dan tidak memiliki hubungan langsung dengan nilai akhir mahasiswa.</p>
+<p>Oleh karena itu atribut tersebut dihapus sebelum proses pemodelan dilakukan.</p>
+<section id="implementasi">
+<h3>Implementasi<a class="headerlink" href="#implementasi" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;STUDENT ID&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="alasan-penghapusan">
+<h3>Alasan Penghapusan<a class="headerlink" href="#alasan-penghapusan" title="Link to this heading">#</a></h3>
+<p>Jika atribut identitas tetap digunakan, model dapat mempelajari pola yang tidak relevan sehingga menurunkan kemampuan generalisasi model.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="pemisahan-variabel-fitur-dan-target">
+<h2>2.7 Pemisahan Variabel Fitur dan Target<a class="headerlink" href="#pemisahan-variabel-fitur-dan-target" title="Link to this heading">#</a></h2>
+<p>Setelah atribut yang tidak relevan dihapus, data dipisahkan menjadi fitur (X) dan target (y).</p>
+<section id="id4">
+<h3>Implementasi<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GRADE&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;GRADE&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="penjelasan">
+<h3>Penjelasan<a class="headerlink" href="#penjelasan" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Variabel <strong>X</strong> berisi seluruh atribut prediktor.</p></li>
+<li><p>Variabel <strong>y</strong> berisi nilai akhir mahasiswa yang akan diprediksi.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="pembagian-data-training-dan-testing">
+<h2>2.8 Pembagian Data Training dan Testing<a class="headerlink" href="#pembagian-data-training-dan-testing" title="Link to this heading">#</a></h2>
+<p>Pembagian data dilakukan menggunakan metode Train-Test Split.</p>
+<p>Proporsi yang digunakan adalah:</p>
+<ul class="simple">
+<li><p>80% data training</p></li>
+<li><p>20% data testing</p></li>
+</ul>
+<section id="id5">
+<h3>Implementasi<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X</span><span class="p">,</span>
+    <span class="n">y</span><span class="p">,</span>
+    <span class="n">test_size</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+    <span class="n">stratify</span><span class="o">=</span><span class="n">y</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>Penjelasan<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Pembagian data dilakukan agar model dapat diuji menggunakan data yang belum pernah dilihat sebelumnya.</p>
+<p>Penggunaan parameter:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+</pre></div>
+</div>
+<p>bertujuan agar hasil pembagian data dapat direproduksi.</p>
+<p>Sedangkan parameter:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">stratify</span><span class="o">=</span><span class="n">y</span>
+</pre></div>
+</div>
+<p>digunakan untuk menjaga proporsi distribusi kelas pada data training dan data testing.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="ringkasan-tahap-preprocessing">
+<h2>2.9 Ringkasan Tahap Preprocessing<a class="headerlink" href="#ringkasan-tahap-preprocessing" title="Link to this heading">#</a></h2>
+<p>Berdasarkan hasil preprocessing yang telah dilakukan, diperoleh beberapa temuan penting sebagai berikut:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tahapan</p></th>
+<th class="head"><p>Hasil</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Missing Value</p></td>
+<td><p>Tidak ditemukan</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data Duplikat</p></td>
+<td><p>Tidak ditemukan</p></td>
+</tr>
+<tr class="row-even"><td><p>Penghapusan STUDENT ID</p></td>
+<td><p>Dilakukan</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pemisahan Fitur dan Target</p></td>
+<td><p>Berhasil</p></td>
+</tr>
+<tr class="row-even"><td><p>Train-Test Split</p></td>
+<td><p>Berhasil</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Secara keseluruhan, dataset memiliki kualitas yang cukup baik karena tidak ditemukan missing value maupun data duplikat. Oleh karena itu data dapat langsung digunakan pada tahap Exploratory Data Analysis (EDA) dan pembangunan model klasifikasi.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="bab-3-exploratory-data-analysis-eda">
+<h1>BAB 3. EXPLORATORY DATA ANALYSIS (EDA)<a class="headerlink" href="#bab-3-exploratory-data-analysis-eda" title="Link to this heading">#</a></h1>
+<section id="id7">
+<h2>3.1 Pendahuluan<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Exploratory Data Analysis (EDA) merupakan tahapan penting dalam proses data mining yang bertujuan untuk memahami karakteristik data sebelum dilakukan pemodelan. Melalui EDA, peneliti dapat mengidentifikasi pola, tren, hubungan antar variabel, serta potensi permasalahan yang terdapat pada dataset.</p>
+<p>Pada penelitian ini, EDA dilakukan menggunakan beberapa teknik visualisasi seperti histogram, boxplot, correlation heatmap, dan pairplot. Hasil analisis ini digunakan sebagai dasar dalam menentukan strategi pemodelan yang tepat pada tahap klasifikasi.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="statistik-deskriptif">
+<h1>3.2 Statistik Deskriptif<a class="headerlink" href="#statistik-deskriptif" title="Link to this heading">#</a></h1>
+<p>Statistik deskriptif digunakan untuk memberikan gambaran umum mengenai distribusi data.</p>
+<section id="id8">
+<h2>Implementasi<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id9">
+<h2>Hasil<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Tabel statistik deskriptif akan menampilkan:</p>
+<ul class="simple">
+<li><p>Count</p></li>
+<li><p>Mean</p></li>
+<li><p>Standard Deviation</p></li>
+<li><p>Minimum</p></li>
+<li><p>Kuartil 1 (25%)</p></li>
+<li><p>Median (50%)</p></li>
+<li><p>Kuartil 3 (75%)</p></li>
+<li><p>Maximum</p></li>
+</ul>
+<p>Contoh penampilan:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Statistik</p></th>
+<th class="head"><p>Nilai</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Count</p></td>
+<td><p>145</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mean</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Std</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Min</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Max</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id10">
+<h2>Interpretasi<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Statistik deskriptif memberikan informasi mengenai persebaran data pada setiap atribut. Nilai rata-rata (mean) menunjukkan kecenderungan pusat data, sedangkan standar deviasi menunjukkan tingkat variasi data terhadap rata-ratanya.</p>
+<p>Semakin besar nilai standar deviasi, maka semakin besar pula variasi data yang dimiliki atribut tersebut.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="analisis-distribusi-nilai-mahasiswa">
+<h1>3.3 Analisis Distribusi Nilai Mahasiswa<a class="headerlink" href="#analisis-distribusi-nilai-mahasiswa" title="Link to this heading">#</a></h1>
+<p>Analisis distribusi dilakukan terhadap variabel target (GRADE) untuk mengetahui pola persebaran nilai mahasiswa.</p>
+<section id="id11">
+<h2>Implementasi<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GRADE&#39;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribusi Nilai Mahasiswa&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Grade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Jumlah Mahasiswa&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="gambar-3-1-distribusi-nilai-mahasiswa">
+<h2>Gambar 3.1 Distribusi Nilai Mahasiswa<a class="headerlink" href="#gambar-3-1-distribusi-nilai-mahasiswa" title="Link to this heading">#</a></h2>
+</section>
+<section id="id12">
+<h2>Interpretasi<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<p>Berdasarkan visualisasi distribusi nilai mahasiswa, terlihat bahwa jumlah mahasiswa pada setiap kategori nilai tidak merata.</p>
+<p>Kategori nilai 1 memiliki jumlah mahasiswa paling banyak, sedangkan kategori nilai 0 memiliki jumlah mahasiswa paling sedikit.</p>
+<p>Distribusi yang tidak seimbang ini menunjukkan bahwa dataset termasuk dalam kategori moderately imbalanced dataset. Kondisi tersebut dapat memengaruhi performa model klasifikasi karena model cenderung lebih mudah mempelajari kelas yang memiliki jumlah data lebih banyak.</p>
+</section>
+<section id="insight">
+<h2>Insight<a class="headerlink" href="#insight" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Sebagian besar mahasiswa memperoleh nilai pada kategori rendah hingga menengah.</p></li>
+<li><p>Jumlah mahasiswa dengan nilai sangat tinggi relatif sedikit.</p></li>
+<li><p>Diperlukan evaluasi model yang tidak hanya bergantung pada accuracy.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="analisis-distribusi-setiap-fitur">
+<h1>3.4 Analisis Distribusi Setiap Fitur<a class="headerlink" href="#analisis-distribusi-setiap-fitur" title="Link to this heading">#</a></h1>
+<p>Histogram digunakan untuk melihat distribusi masing-masing atribut pada dataset.</p>
+<section id="id13">
+<h2>Implementasi<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">15</span><span class="p">),</span>
+    <span class="n">bins</span><span class="o">=</span><span class="mi">15</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="gambar-3-2-histogram-seluruh-variabel">
+<h2>Gambar 3.2 Histogram Seluruh Variabel<a class="headerlink" href="#gambar-3-2-histogram-seluruh-variabel" title="Link to this heading">#</a></h2>
+</section>
+<section id="id14">
+<h2>Interpretasi<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<p>Histogram menunjukkan bagaimana distribusi nilai pada masing-masing atribut.</p>
+<p>Melalui histogram dapat diketahui:</p>
+<ul class="simple">
+<li><p>Apakah distribusi data normal atau tidak.</p></li>
+<li><p>Apakah terdapat atribut yang memiliki distribusi tidak merata.</p></li>
+<li><p>Apakah terdapat indikasi skewness pada beberapa variabel.</p></li>
+</ul>
+</section>
+<section id="id15">
+<h2>Insight<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<p>Beberapa atribut menunjukkan distribusi yang terkonsentrasi pada nilai tertentu, yang mengindikasikan adanya karakteristik dominan pada mahasiswa dalam dataset.</p>
+<p>Distribusi yang tidak merata dapat memengaruhi performa algoritma tertentu seperti KNN dan Naive Bayes.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="analisis-outlier-menggunakan-boxplot">
+<h1>3.5 Analisis Outlier Menggunakan Boxplot<a class="headerlink" href="#analisis-outlier-menggunakan-boxplot" title="Link to this heading">#</a></h1>
+<p>Boxplot digunakan untuk mendeteksi keberadaan outlier pada dataset.</p>
+<section id="id16">
+<h2>Implementasi<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span>
+    <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="gambar-3-3-boxplot-dataset">
+<h2>Gambar 3.3 Boxplot Dataset<a class="headerlink" href="#gambar-3-3-boxplot-dataset" title="Link to this heading">#</a></h2>
+</section>
+<section id="id17">
+<h2>Interpretasi<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<p>Boxplot menampilkan:</p>
+<ul class="simple">
+<li><p>Nilai minimum</p></li>
+<li><p>Kuartil pertama</p></li>
+<li><p>Median</p></li>
+<li><p>Kuartil ketiga</p></li>
+<li><p>Nilai maksimum</p></li>
+<li><p>Outlier</p></li>
+</ul>
+<p>Berdasarkan visualisasi boxplot, sebagian besar atribut tidak menunjukkan keberadaan outlier ekstrem yang dapat mengganggu proses pembelajaran model.</p>
+</section>
+<section id="id18">
+<h2>Insight<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Persebaran data relatif stabil.</p></li>
+<li><p>Tidak ditemukan outlier yang sangat ekstrem.</p></li>
+<li><p>Dataset dapat langsung digunakan untuk proses klasifikasi.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="analisis-korelasi-antar-variabel">
+<h1>3.6 Analisis Korelasi Antar Variabel<a class="headerlink" href="#analisis-korelasi-antar-variabel" title="Link to this heading">#</a></h1>
+<p>Correlation Heatmap digunakan untuk mengukur hubungan antar variabel dalam dataset.</p>
+<section id="id19">
+<h2>Implementasi<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span>
+        <span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">),</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span>
+    <span class="s1">&#39;Correlation Heatmap&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="gambar-3-4-correlation-heatmap">
+<h2>Gambar 3.4 Correlation Heatmap<a class="headerlink" href="#gambar-3-4-correlation-heatmap" title="Link to this heading">#</a></h2>
+</section>
+<section id="id20">
+<h2>Interpretasi<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<p>Heatmap menunjukkan tingkat hubungan antar atribut menggunakan nilai korelasi.</p>
+<p>Rentang korelasi:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nilai Korelasi</p></th>
+<th class="head"><p>Interpretasi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.00 – 0.19</p></td>
+<td><p>Sangat Lemah</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.20 – 0.39</p></td>
+<td><p>Lemah</p></td>
+</tr>
+<tr class="row-even"><td><p>0.40 – 0.59</p></td>
+<td><p>Sedang</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.60 – 0.79</p></td>
+<td><p>Kuat</p></td>
+</tr>
+<tr class="row-even"><td><p>0.80 – 1.00</p></td>
+<td><p>Sangat Kuat</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Semakin mendekati 1 maka hubungan kedua variabel semakin kuat.</p>
+<p>Semakin mendekati -1 maka hubungan kedua variabel semakin kuat tetapi berlawanan arah.</p>
+</section>
+<section id="id21">
+<h2>Insight<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<p>Berdasarkan heatmap, sebagian besar atribut memiliki hubungan yang rendah hingga sedang.</p>
+<p>Hal ini menunjukkan bahwa masing-masing atribut memberikan informasi yang relatif berbeda sehingga tetap layak digunakan dalam proses klasifikasi.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="pairplot">
+<h1>3.7 Pairplot<a class="headerlink" href="#pairplot" title="Link to this heading">#</a></h1>
+<p>Pairplot digunakan untuk melihat hubungan antar variabel secara visual.</p>
+<section id="id22">
+<h2>Implementasi<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">selected_features</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;COURSE ID&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;GRADE&#39;</span>
+<span class="p">]</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">[</span><span class="n">selected_features</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="gambar-3-5-pairplot">
+<h2>Gambar 3.5 Pairplot<a class="headerlink" href="#gambar-3-5-pairplot" title="Link to this heading">#</a></h2>
+</section>
+<section id="id23">
+<h2>Interpretasi<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
+<p>Pairplot memperlihatkan hubungan antara dua atau lebih variabel melalui scatter plot dan distribusi data.</p>
+<p>Visualisasi ini membantu mengidentifikasi pola tertentu yang mungkin tidak terlihat melalui statistik deskriptif.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="analisis-variabel-target-terhadap-fitur">
+<h1>3.8 Analisis Variabel Target terhadap Fitur<a class="headerlink" href="#analisis-variabel-target-terhadap-fitur" title="Link to this heading">#</a></h1>
+<p>Untuk mengetahui hubungan antara nilai akhir mahasiswa dan fitur tertentu dapat digunakan boxplot berdasarkan kategori nilai.</p>
+<section id="id24">
+<h2>Implementasi<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GRADE&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;COURSE ID&#39;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="gambar-3-6-hubungan-course-id-terhadap-grade">
+<h2>Gambar 3.6 Hubungan COURSE ID terhadap GRADE<a class="headerlink" href="#gambar-3-6-hubungan-course-id-terhadap-grade" title="Link to this heading">#</a></h2>
+</section>
+<section id="id25">
+<h2>Interpretasi<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
+<p>Visualisasi menunjukkan variasi nilai COURSE ID pada setiap kategori nilai mahasiswa.</p>
+<p>Perbedaan distribusi dapat mengindikasikan bahwa karakteristik mata kuliah memiliki pengaruh terhadap performa akademik mahasiswa.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="ringkasan-hasil-eda">
+<h1>3.9 Ringkasan Hasil EDA<a class="headerlink" href="#ringkasan-hasil-eda" title="Link to this heading">#</a></h1>
+<p>Berdasarkan hasil Exploratory Data Analysis yang telah dilakukan, diperoleh beberapa temuan penting sebagai berikut:</p>
+<ol class="arabic simple">
+<li><p>Dataset terdiri dari 145 data mahasiswa dan 33 atribut.</p></li>
+<li><p>Tidak ditemukan missing value maupun data duplikat.</p></li>
+<li><p>Distribusi variabel target (GRADE) tidak sepenuhnya seimbang.</p></li>
+<li><p>Sebagian besar atribut memiliki persebaran data yang relatif baik.</p></li>
+<li><p>Tidak ditemukan outlier ekstrem yang berpotensi mengganggu proses klasifikasi.</p></li>
+<li><p>Korelasi antar variabel cenderung rendah hingga sedang.</p></li>
+<li><p>Seluruh atribut layak digunakan dalam proses pembangunan model klasifikasi.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="kesimpulan-eda">
+<h1>3.10 Kesimpulan EDA<a class="headerlink" href="#kesimpulan-eda" title="Link to this heading">#</a></h1>
+<p>Tahap Exploratory Data Analysis menunjukkan bahwa dataset memiliki kualitas yang cukup baik untuk digunakan dalam proses klasifikasi.</p>
+<p>Tidak ditemukan permasalahan serius seperti missing value, data duplikat, maupun outlier ekstrem. Selain itu, hasil visualisasi menunjukkan bahwa atribut-atribut yang tersedia memiliki potensi untuk digunakan dalam memprediksi nilai akhir mahasiswa.</p>
+<p>Berdasarkan hasil tersebut, dataset siap digunakan pada tahap berikutnya yaitu pembangunan model klasifikasi menggunakan algoritma Decision Tree, Random Forest, K-Nearest Neighbor (KNN), dan Naive Bayes.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="bab-4-implementasi-dan-hasil-klasifikasi">
+<h1>BAB 4. IMPLEMENTASI DAN HASIL KLASIFIKASI<a class="headerlink" href="#bab-4-implementasi-dan-hasil-klasifikasi" title="Link to this heading">#</a></h1>
+<section id="id26">
+<h2>4.1 Pendahuluan<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
+<p>Setelah proses Exploratory Data Analysis (EDA) selesai dilakukan, tahap berikutnya adalah membangun model klasifikasi untuk memprediksi nilai akhir mahasiswa berdasarkan atribut yang tersedia pada dataset.</p>
+<p>Pada penelitian ini digunakan empat algoritma klasifikasi yang umum digunakan dalam bidang data mining, yaitu:</p>
+<ol class="arabic simple">
+<li><p>Decision Tree</p></li>
+<li><p>Random Forest</p></li>
+<li><p>K-Nearest Neighbor (KNN)</p></li>
+<li><p>Naive Bayes</p></li>
+</ol>
+<p>Keempat algoritma tersebut dipilih karena memiliki karakteristik yang berbeda sehingga dapat digunakan untuk membandingkan performa klasifikasi pada dataset Student Performance.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="persiapan-data">
+<h1>4.2 Persiapan Data<a class="headerlink" href="#persiapan-data" title="Link to this heading">#</a></h1>
+<p>Sebelum melakukan proses klasifikasi, data dibagi menjadi data training dan data testing.</p>
+<section id="id27">
+<h2>Implementasi<a class="headerlink" href="#id27" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;STUDENT ID&#39;</span><span class="p">,</span><span class="s1">&#39;GRADE&#39;</span><span class="p">],</span>
+    <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;GRADE&#39;</span><span class="p">]</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X</span><span class="p">,</span>
+    <span class="n">y</span><span class="p">,</span>
+    <span class="n">test_size</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+    <span class="n">stratify</span><span class="o">=</span><span class="n">y</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id28">
+<h2>Penjelasan<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
+<p>Data dibagi menggunakan metode Train-Test Split dengan proporsi:</p>
+<ul class="simple">
+<li><p>Data Training : 80%</p></li>
+<li><p>Data Testing : 20%</p></li>
+</ul>
+<p>Pembagian ini bertujuan agar model dapat diuji menggunakan data yang belum pernah digunakan saat proses pelatihan.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="klasifikasi-menggunakan-decision-tree">
+<h1>4.3 Klasifikasi Menggunakan Decision Tree<a class="headerlink" href="#klasifikasi-menggunakan-decision-tree" title="Link to this heading">#</a></h1>
+<section id="teori-decision-tree">
+<h2>4.3.1 Teori Decision Tree<a class="headerlink" href="#teori-decision-tree" title="Link to this heading">#</a></h2>
+<p>Decision Tree merupakan algoritma klasifikasi yang membentuk struktur pohon keputusan berdasarkan atribut yang paling mampu memisahkan data ke dalam kelas tertentu.</p>
+<p>Setiap node dalam pohon merepresentasikan atribut, sedangkan setiap cabang menunjukkan aturan keputusan.</p>
+<p>Keunggulan Decision Tree:</p>
+<ul class="simple">
+<li><p>Mudah dipahami</p></li>
+<li><p>Mudah divisualisasikan</p></li>
+<li><p>Cepat dalam proses pelatihan</p></li>
+<li><p>Dapat digunakan untuk menentukan faktor yang paling berpengaruh</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id29">
+<h2>4.3.2 Implementasi<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+
+<span class="n">dt_model</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="p">)</span>
+
+<span class="n">dt_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+    <span class="n">X_train</span><span class="p">,</span>
+    <span class="n">y_train</span>
+<span class="p">)</span>
+
+<span class="n">y_pred_dt</span> <span class="o">=</span> <span class="n">dt_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+    <span class="n">X_test</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<section id="sumber-kode">
+<h3>Sumber Kode<a class="headerlink" href="#sumber-kode" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html">https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html</a></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="evaluasi-model">
+<h2>4.3.3 Evaluasi Model<a class="headerlink" href="#evaluasi-model" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">accuracy_score</span><span class="p">,</span>
+    <span class="n">classification_report</span><span class="p">,</span>
+    <span class="n">confusion_matrix</span>
+<span class="p">)</span>
+
+<span class="n">accuracy_dt</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span>
+    <span class="n">y_test</span><span class="p">,</span>
+    <span class="n">y_pred_dt</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="s2">&quot;Accuracy:&quot;</span><span class="p">,</span>
+    <span class="n">accuracy_dt</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="n">classification_report</span><span class="p">(</span>
+        <span class="n">y_test</span><span class="p">,</span>
+        <span class="n">y_pred_dt</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id30">
+<h2>4.3.4 Hasil<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Metrik</p></th>
+<th class="head"><p>Nilai</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Accuracy</p></td>
+<td><p>31.03%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Precision</p></td>
+<td><p>36.30%</p></td>
+</tr>
+<tr class="row-even"><td><p>Recall</p></td>
+<td><p>31.03%</p></td>
+</tr>
+<tr class="row-odd"><td><p>F1-Score</p></td>
+<td><p>31.42%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="confusion-matrix">
+<h2>4.3.5 Confusion Matrix<a class="headerlink" href="#confusion-matrix" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span>
+    <span class="n">y_test</span><span class="p">,</span>
+    <span class="n">y_pred_dt</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">cm</span><span class="p">,</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span>
+    <span class="s1">&#39;Confusion Matrix Decision Tree&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="id31">
+<h3>Interpretasi<a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
+<p>Decision Tree mampu menghasilkan performa yang cukup baik dibandingkan algoritma lain yang diuji.</p>
+<p>Model dapat mengidentifikasi beberapa kelas dengan baik meskipun masih terdapat kesalahan klasifikasi pada beberapa kategori nilai.</p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="klasifikasi-menggunakan-random-forest">
+<h1>4.4 Klasifikasi Menggunakan Random Forest<a class="headerlink" href="#klasifikasi-menggunakan-random-forest" title="Link to this heading">#</a></h1>
+<section id="teori-random-forest">
+<h2>4.4.1 Teori Random Forest<a class="headerlink" href="#teori-random-forest" title="Link to this heading">#</a></h2>
+<p>Random Forest merupakan algoritma ensemble yang menggabungkan banyak pohon keputusan (Decision Tree) untuk meningkatkan stabilitas dan akurasi prediksi.</p>
+<p>Metode ini bekerja menggunakan teknik bootstrap sampling dan voting.</p>
+<p>Keunggulan Random Forest:</p>
+<ul class="simple">
+<li><p>Mengurangi overfitting</p></li>
+<li><p>Akurasi tinggi</p></li>
+<li><p>Dapat menghasilkan feature importance</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id32">
+<h2>4.4.2 Implementasi<a class="headerlink" href="#id32" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+
+<span class="n">rf_model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span>
+    <span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="p">)</span>
+
+<span class="n">rf_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+    <span class="n">X_train</span><span class="p">,</span>
+    <span class="n">y_train</span>
+<span class="p">)</span>
+
+<span class="n">y_pred_rf</span> <span class="o">=</span> <span class="n">rf_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+    <span class="n">X_test</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<section id="id33">
+<h3>Sumber Kode<a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html">https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html</a></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id34">
+<h2>4.4.3 Evaluasi Model<a class="headerlink" href="#id34" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accuracy_rf</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span>
+    <span class="n">y_test</span><span class="p">,</span>
+    <span class="n">y_pred_rf</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="n">accuracy_rf</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id35">
+<h2>4.4.4 Hasil<a class="headerlink" href="#id35" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Metrik</p></th>
+<th class="head"><p>Nilai</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Accuracy</p></td>
+<td><p>31.03%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Precision</p></td>
+<td><p>27.37%</p></td>
+</tr>
+<tr class="row-even"><td><p>Recall</p></td>
+<td><p>31.03%</p></td>
+</tr>
+<tr class="row-odd"><td><p>F1-Score</p></td>
+<td><p>24.62%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id36">
+<h2>4.4.5 Confusion Matrix<a class="headerlink" href="#id36" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span>
+    <span class="n">y_test</span><span class="p">,</span>
+    <span class="n">y_pred_rf</span>
+<span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">cm</span><span class="p">,</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span>
+    <span class="s1">&#39;Confusion Matrix Random Forest&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="id37">
+<h3>Interpretasi<a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
+<p>Random Forest menghasilkan akurasi yang sama dengan Decision Tree.</p>
+<p>Namun nilai F1-Score lebih rendah sehingga kemampuan klasifikasinya secara keseluruhan sedikit berada di bawah Decision Tree.</p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="klasifikasi-menggunakan-k-nearest-neighbor-knn">
+<h1>4.5 Klasifikasi Menggunakan K-Nearest Neighbor (KNN)<a class="headerlink" href="#klasifikasi-menggunakan-k-nearest-neighbor-knn" title="Link to this heading">#</a></h1>
+<section id="teori-knn">
+<h2>4.5.1 Teori KNN<a class="headerlink" href="#teori-knn" title="Link to this heading">#</a></h2>
+<p>K-Nearest Neighbor merupakan algoritma klasifikasi berbasis jarak.</p>
+<p>Data baru akan diklasifikasikan berdasarkan mayoritas kelas dari sejumlah tetangga terdekat.</p>
+<p>Pada penelitian ini digunakan:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id38">
+<h2>4.5.2 Implementasi<a class="headerlink" href="#id38" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+
+<span class="n">knn_model</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span>
+    <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span>
+<span class="p">)</span>
+
+<span class="n">knn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+    <span class="n">X_train</span><span class="p">,</span>
+    <span class="n">y_train</span>
+<span class="p">)</span>
+
+<span class="n">y_pred_knn</span> <span class="o">=</span> <span class="n">knn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+    <span class="n">X_test</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<section id="id39">
+<h3>Sumber Kode<a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html">https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html</a></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id40">
+<h2>4.5.3 Hasil<a class="headerlink" href="#id40" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Metrik</p></th>
+<th class="head"><p>Nilai</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Accuracy</p></td>
+<td><p>20.69%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Precision</p></td>
+<td><p>24.53%</p></td>
+</tr>
+<tr class="row-even"><td><p>Recall</p></td>
+<td><p>20.69%</p></td>
+</tr>
+<tr class="row-odd"><td><p>F1-Score</p></td>
+<td><p>19.13%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id41">
+<h2>4.5.4 Confusion Matrix<a class="headerlink" href="#id41" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span>
+    <span class="n">y_test</span><span class="p">,</span>
+    <span class="n">y_pred_knn</span>
+<span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">cm</span><span class="p">,</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span>
+    <span class="s1">&#39;Confusion Matrix KNN&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="id42">
+<h3>Interpretasi<a class="headerlink" href="#id42" title="Link to this heading">#</a></h3>
+<p>Performa KNN berada di bawah Decision Tree dan Random Forest.</p>
+<p>Hal ini menunjukkan bahwa pola data pada dataset tidak terlalu cocok dipisahkan hanya berdasarkan kedekatan jarak antar data.</p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="klasifikasi-menggunakan-naive-bayes">
+<h1>4.6 Klasifikasi Menggunakan Naive Bayes<a class="headerlink" href="#klasifikasi-menggunakan-naive-bayes" title="Link to this heading">#</a></h1>
+<section id="teori-naive-bayes">
+<h2>4.6.1 Teori Naive Bayes<a class="headerlink" href="#teori-naive-bayes" title="Link to this heading">#</a></h2>
+<p>Naive Bayes merupakan algoritma klasifikasi probabilistik yang menggunakan Teorema Bayes.</p>
+<p>Algoritma ini mengasumsikan bahwa setiap atribut bersifat independen terhadap atribut lainnya.</p>
+<p>Keunggulan:</p>
+<ul class="simple">
+<li><p>Cepat</p></li>
+<li><p>Sederhana</p></li>
+<li><p>Cocok untuk baseline model</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id43">
+<h2>4.6.2 Implementasi<a class="headerlink" href="#id43" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.naive_bayes</span><span class="w"> </span><span class="kn">import</span> <span class="n">GaussianNB</span>
+
+<span class="n">nb_model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+
+<span class="n">nb_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+    <span class="n">X_train</span><span class="p">,</span>
+    <span class="n">y_train</span>
+<span class="p">)</span>
+
+<span class="n">y_pred_nb</span> <span class="o">=</span> <span class="n">nb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+    <span class="n">X_test</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<section id="id44">
+<h3>Sumber Kode<a class="headerlink" href="#id44" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html">https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html</a></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id45">
+<h2>4.6.3 Hasil<a class="headerlink" href="#id45" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Metrik</p></th>
+<th class="head"><p>Nilai</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Accuracy</p></td>
+<td><p>13.79%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Precision</p></td>
+<td><p>5.25%</p></td>
+</tr>
+<tr class="row-even"><td><p>Recall</p></td>
+<td><p>13.79%</p></td>
+</tr>
+<tr class="row-odd"><td><p>F1-Score</p></td>
+<td><p>7.59%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id46">
+<h2>4.6.4 Confusion Matrix<a class="headerlink" href="#id46" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span>
+    <span class="n">y_test</span><span class="p">,</span>
+    <span class="n">y_pred_nb</span>
+<span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">cm</span><span class="p">,</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span>
+    <span class="s1">&#39;Confusion Matrix Naive Bayes&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="id47">
+<h3>Interpretasi<a class="headerlink" href="#id47" title="Link to this heading">#</a></h3>
+<p>Naive Bayes menghasilkan performa terendah pada penelitian ini.</p>
+<p>Hal ini mengindikasikan bahwa asumsi independensi antar atribut tidak sepenuhnya sesuai dengan karakteristik dataset Student Performance.</p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="perbandingan-model">
+<h1>4.7 Perbandingan Model<a class="headerlink" href="#perbandingan-model" title="Link to this heading">#</a></h1>
+<p>Untuk menentukan model terbaik dilakukan perbandingan berdasarkan Accuracy, Precision, Recall, dan F1-Score.</p>
+<section id="hasil-perbandingan">
+<h2>Hasil Perbandingan<a class="headerlink" href="#hasil-perbandingan" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Algoritma</p></th>
+<th class="head"><p>Accuracy</p></th>
+<th class="head"><p>Precision</p></th>
+<th class="head"><p>Recall</p></th>
+<th class="head"><p>F1-Score</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Decision Tree</p></td>
+<td><p>31.03%</p></td>
+<td><p>36.30%</p></td>
+<td><p>31.03%</p></td>
+<td><p>31.42%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Random Forest</p></td>
+<td><p>31.03%</p></td>
+<td><p>27.37%</p></td>
+<td><p>31.03%</p></td>
+<td><p>24.62%</p></td>
+</tr>
+<tr class="row-even"><td><p>KNN</p></td>
+<td><p>20.69%</p></td>
+<td><p>24.53%</p></td>
+<td><p>20.69%</p></td>
+<td><p>19.13%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Naive Bayes</p></td>
+<td><p>13.79%</p></td>
+<td><p>5.25%</p></td>
+<td><p>13.79%</p></td>
+<td><p>7.59%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="visualisasi-perbandingan-accuracy">
+<h2>Visualisasi Perbandingan Accuracy<a class="headerlink" href="#visualisasi-perbandingan-accuracy" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Decision Tree&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Random Forest&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KNN&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Naive Bayes&#39;</span>
+<span class="p">]</span>
+
+<span class="n">accuracy</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mf">31.03</span><span class="p">,</span>
+    <span class="mf">31.03</span><span class="p">,</span>
+    <span class="mf">20.69</span><span class="p">,</span>
+    <span class="mf">13.79</span>
+<span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">models</span><span class="p">,</span>
+    <span class="n">accuracy</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span>
+    <span class="s1">&#39;Perbandingan Accuracy Model&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span>
+    <span class="s1">&#39;Accuracy (%)&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="id48">
+<h3>Interpretasi<a class="headerlink" href="#id48" title="Link to this heading">#</a></h3>
+<p>Grafik menunjukkan bahwa Decision Tree dan Random Forest menghasilkan performa terbaik dibandingkan model lainnya.</p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="model-terbaik">
+<h1>4.8 Model Terbaik<a class="headerlink" href="#model-terbaik" title="Link to this heading">#</a></h1>
+<p>Berdasarkan hasil evaluasi yang telah dilakukan, model terbaik pada penelitian ini adalah:</p>
+<section id="decision-tree">
+<h2>Decision Tree<a class="headerlink" href="#decision-tree" title="Link to this heading">#</a></h2>
+<p>Alasan pemilihan:</p>
+<ol class="arabic simple">
+<li><p>Memiliki Accuracy tertinggi.</p></li>
+<li><p>Memiliki F1-Score tertinggi.</p></li>
+<li><p>Mudah dipahami dan diinterpretasikan.</p></li>
+<li><p>Mampu menjelaskan proses pengambilan keputusan secara visual.</p></li>
+</ol>
+<p>Dengan demikian Decision Tree dipilih sebagai model terbaik untuk memprediksi performa akademik mahasiswa pada dataset Student Performance.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="kesimpulan-bab">
+<h1>4.9 Kesimpulan Bab<a class="headerlink" href="#kesimpulan-bab" title="Link to this heading">#</a></h1>
+<p>Empat algoritma klasifikasi berhasil diterapkan pada dataset Student Performance.</p>
+<p>Berdasarkan hasil evaluasi, algoritma Decision Tree menghasilkan performa terbaik dengan Accuracy sebesar 31,03% dan F1-Score sebesar 31,42%.</p>
+<p>Hasil tersebut menunjukkan bahwa Decision Tree merupakan metode yang paling sesuai untuk digunakan pada dataset yang dianalisis dalam penelitian ini.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pertemuan15.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">pertemuan 15</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Analisis dan Prediksi Performa Akademik Mahasiswa Menggunakan Algoritma Klasifikasi</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstrak">Abstrak</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan">1. Pendahuluan</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latar-belakang">1.1 Latar Belakang</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bab-2-deskripsi-dataset-dan-data-preprocessing">BAB 2. DESKRIPSI DATASET DAN DATA PREPROCESSING</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deskripsi-dataset">2.1 Deskripsi Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#informasi-dataset">2.1.1 Informasi Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#struktur-dataset">2.1.2 Struktur Dataset</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-variabel-target">2.2 Analisis Variabel Target</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribusi-nilai-mahasiswa">Distribusi Nilai Mahasiswa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretasi">Interpretasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretasi-visualisasi">Interpretasi Visualisasi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing">2.3 Data Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemeriksaan-missing-value">2.4 Pemeriksaan Missing Value</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil">Hasil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Interpretasi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemeriksaan-data-duplikat">2.5 Pemeriksaan Data Duplikat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Hasil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Interpretasi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penghapusan-atribut-tidak-relevan">2.6 Penghapusan Atribut Tidak Relevan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi">Implementasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alasan-penghapusan">Alasan Penghapusan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pemisahan-variabel-fitur-dan-target">2.7 Pemisahan Variabel Fitur dan Target</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Implementasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan">Penjelasan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembagian-data-training-dan-testing">2.8 Pembagian Data Training dan Testing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Implementasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Penjelasan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-tahap-preprocessing">2.9 Ringkasan Tahap Preprocessing</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bab-3-exploratory-data-analysis-eda">BAB 3. EXPLORATORY DATA ANALYSIS (EDA)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.1 Pendahuluan</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statistik-deskriptif">3.2 Statistik Deskriptif</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Interpretasi</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-distribusi-nilai-mahasiswa">3.3 Analisis Distribusi Nilai Mahasiswa</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-3-1-distribusi-nilai-mahasiswa">Gambar 3.1 Distribusi Nilai Mahasiswa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insight">Insight</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-distribusi-setiap-fitur">3.4 Analisis Distribusi Setiap Fitur</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-3-2-histogram-seluruh-variabel">Gambar 3.2 Histogram Seluruh Variabel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Insight</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-outlier-menggunakan-boxplot">3.5 Analisis Outlier Menggunakan Boxplot</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-3-3-boxplot-dataset">Gambar 3.3 Boxplot Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Insight</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-korelasi-antar-variabel">3.6 Analisis Korelasi Antar Variabel</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-3-4-correlation-heatmap">Gambar 3.4 Correlation Heatmap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Interpretasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Insight</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pairplot">3.7 Pairplot</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-3-5-pairplot">Gambar 3.5 Pairplot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Interpretasi</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-variabel-target-terhadap-fitur">3.8 Analisis Variabel Target terhadap Fitur</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-3-6-hubungan-course-id-terhadap-grade">Gambar 3.6 Hubungan COURSE ID terhadap GRADE</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Interpretasi</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-hasil-eda">3.9 Ringkasan Hasil EDA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-eda">3.10 Kesimpulan EDA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bab-4-implementasi-dan-hasil-klasifikasi">BAB 4. IMPLEMENTASI DAN HASIL KLASIFIKASI</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">4.1 Pendahuluan</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapan-data">4.2 Persiapan Data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Implementasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Penjelasan</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-menggunakan-decision-tree">4.3 Klasifikasi Menggunakan Decision Tree</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teori-decision-tree">4.3.1 Teori Decision Tree</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">4.3.2 Implementasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sumber-kode">Sumber Kode</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model">4.3.3 Evaluasi Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">4.3.4 Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix">4.3.5 Confusion Matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Interpretasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-menggunakan-random-forest">4.4 Klasifikasi Menggunakan Random Forest</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teori-random-forest">4.4.1 Teori Random Forest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">4.4.2 Implementasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Sumber Kode</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">4.4.3 Evaluasi Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">4.4.4 Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">4.4.5 Confusion Matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">Interpretasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-menggunakan-k-nearest-neighbor-knn">4.5 Klasifikasi Menggunakan K-Nearest Neighbor (KNN)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teori-knn">4.5.1 Teori KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">4.5.2 Implementasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">Sumber Kode</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">4.5.3 Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">4.5.4 Confusion Matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">Interpretasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-menggunakan-naive-bayes">4.6 Klasifikasi Menggunakan Naive Bayes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teori-naive-bayes">4.6.1 Teori Naive Bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">4.6.2 Implementasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">Sumber Kode</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id45">4.6.3 Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id46">4.6.4 Confusion Matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id47">Interpretasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perbandingan-model">4.7 Perbandingan Model</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-perbandingan">Hasil Perbandingan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-perbandingan-accuracy">Visualisasi Perbandingan Accuracy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id48">Interpretasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#model-terbaik">4.8 Model Terbaik</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree">Decision Tree</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-bab">4.9 Kesimpulan Bab</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
